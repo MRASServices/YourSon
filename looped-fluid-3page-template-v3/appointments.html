@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Brand — Appointments</title>
+  <meta name="description" content="Appointments page (demo). Replace with your scheduling embed or form workflow." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header id="siteHeader" data-open="false">
+    <div class="wrap">
+      <div class="nav">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+<main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-media" aria-label="Appointments hero image placeholder">
+            <!-- <img src="assets/hero-appointments.webp" alt="Appointments hero image" /> -->
+          </div>
+
+          <div class="hero-copy">
+            <div class="kicker">Book a visit • Ask a question • Get a quote</div>
+            <h1>Appointments</h1>
+            <p class="lead">
+              Same hero structure: image first, content below. Replace placeholder with your own photo and connect your real booking tool.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="#request">Request a Time</a>
+              <a class="btn ghost" href="shop.html">Browse Shop</a>
+            </div>
+
+            <div class="contact">
+              <div>Service area: Example Region</div>
+              <div>Response: within 24 hours</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Choose a booking type</h2>
+          <p>Keep options simple. You can add duration, pricing, and requirements later.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="tile">
+            <h3>Quick Fix Visit</h3>
+            <p>Small tasks, troubleshooting, light install help.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="#request">Request</a>
+              <a class="btn ghost" href="index.html#services">Services</a>
+            </div>
+          </article>
+
+          <article class="tile">
+            <h3>Project Consult</h3>
+            <p>Walkthrough + scope + next steps. Great for planning.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="#request">Request</a>
+              <a class="btn ghost" href="index.html#services">Services</a>
+            </div>
+          </article>
+
+          <article class="tile">
+            <h3>Recurring Support</h3>
+            <p>Weekly/biweekly help with home tasks and errands.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="#request">Request</a>
+              <a class="btn ghost" href="index.html#services">Services</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="request">
+      <div class="wrap">
+        <div class="two-col">
+          <div class="card">
+            <h2>Come Visit!</h2>
+            <p>Add your real address/service area + a short invite.</p>
+            <div class="cta-row">
+              <a class="btn ghost" href="index.html">Home</a>
+              <a class="btn ghost" href="shop.html">Shop</a>
+              <a class="btn primary" href="#" data-open-cart>Open Cart</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Request a time</h2>
+            <p>Demo form (no backend). Wire it to email/CRM later.</p>
+
+            <form class="form" onsubmit="event.preventDefault(); alert('Demo submitted. Connect this to your real booking workflow.');">
+              <div class="row">
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" autocomplete="name" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required />
+                </div>
+              </div>
+
+              <div class="row">
+                <div>
+                  <label for="type">Booking type</label>
+                  <select id="type" name="type" required>
+                    <option value="">Select…</option>
+                    <option>Quick Fix Visit</option>
+                    <option>Project Consult</option>
+                    <option>Recurring Support</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="window">Preferred time window</label>
+                  <select id="window" name="window" required>
+                    <option value="">Select…</option>
+                    <option>Weekday mornings</option>
+                    <option>Weekday afternoons</option>
+                    <option>Weekday evenings</option>
+                    <option>Weekend</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="details">What do you need help with?</label>
+                <textarea id="details" name="details" placeholder="A few sentences helps a lot…"></textarea>
+              </div>
+
+              <button class="btn primary" type="submit">Send Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div>© <span data-year></span> Your Brand • Appointments</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

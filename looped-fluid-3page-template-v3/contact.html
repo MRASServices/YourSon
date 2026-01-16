@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Brand — Contact</title>
+  <meta name="description" content="Contact page." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header id="siteHeader" data-open="false">
+    <div class="wrap">
+      <div class="nav">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-media" aria-label="Page hero image placeholder">
+            <!-- Optional page hero image:
+            <img src="assets/toppagelogo.webp" alt="Hero image" />
+            -->
+          </div>
+
+          <div class="hero-copy">
+            <div class="kicker">Questions • Quotes • Requests</div>
+            <h1>Contact</h1>
+            <p class="lead">Reach out with a quick message, or use appointments if you already know what you need.</p>
+
+            <div class="cta-row">
+              <a class="btn ghost" href="appointments.html">Book</a>
+              <a class="btn primary" href="shop.html">Shop</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Send a message</h2>
+          <p>Demo form (no backend). Hook to email/CRM later.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <h2>Details</h2>
+            <p>
+              GTA • Newmarket, ON<br/>
+              connectwith@yourson.ca
+            </p>
+            <div class="cta-row" style="justify-content:flex-start;">
+              <a class="btn ghost" href="services.html">Services</a>
+              <a class="btn primary" href="appointments.html">Book</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Message form</h2>
+            <form class="form" onsubmit="event.preventDefault(); alert('Demo submitted. Connect this to your real contact workflow.');">
+              <div class="row">
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" autocomplete="name" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required />
+                </div>
+              </div>
+
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="How can we help?"></textarea>
+              </div>
+
+              <button class="btn primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="wrap">
+        <div>© <span data-year></span> Your Brand</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

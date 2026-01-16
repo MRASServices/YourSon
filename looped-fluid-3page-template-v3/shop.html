@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Brand — Shop</title>
+  <meta name="description" content="Shop page (demo). Includes localStorage cart and responsive product grid." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header id="siteHeader" data-open="false">
+    <div class="wrap">
+      <div class="nav">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+<main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-media" aria-label="Shop hero image placeholder">
+            <!-- <img src="assets/hero-shop.webp" alt="Shop hero image" /> -->
+          </div>
+
+          <div class="hero-copy">
+            <div class="kicker">Small goods • Useful add-ons • Clean design</div>
+            <h1>Shop</h1>
+            <p class="lead">
+              Image-first hero for consistency: centered image on top, content below, then products.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="#" data-open-cart>View Cart</a>
+              <a class="btn ghost" href="appointments.html">Appointments</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Featured Goods</h2>
+          <p>A simple grid that becomes 2-wide, then 1-wide on smaller screens.</p>
+        </div>
+
+        <div class="shop-grid" id="shopGrid" aria-label="Product grid">
+          <!-- Populated by site.js -->
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="two-col">
+          <div class="card">
+            <h2>Need help choosing?</h2>
+            <p>Use this as a soft upsell: recommend products that pair with your services.</p>
+            <div class="cta-row">
+              <a class="btn ghost" href="index.html">Home</a>
+              <a class="btn primary" href="appointments.html">Book a Visit</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Shipping & pickup</h2>
+            <p>Add your real policy (pickup windows, local drop-off, shipping cutoff times).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div>© <span data-year></span> Your Brand • Shop</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>
