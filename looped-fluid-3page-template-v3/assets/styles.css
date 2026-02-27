@@ -149,23 +149,48 @@ h1{
   margin: 0 auto;
 }
 
-/* Centered hero image block */
+.leadabt{
+  font-size: var(--p);
+  color:var(--muted);
+  max-width: 88ch;
+  line-height:3ch;
+  margin: 0 auto;
+}
+
+/* Base */
 .hero-media{
+  overflow: hidden;
+  position: relative;
+  border: none;            /* no !important */
+}
+
+/* With border (About, etc.) */
+.hero-media--border{
+  width: min(85rem, 100%);
+  height: clamp(240px, 38vw, 600px);
+  border: 1.5px solid #000;
+  border-radius: 1px;
+}
+
+/* No border (Index, etc.) */
+.hero-media--no-border{
   width: min(62rem, 80%);
   height: clamp(240px, 38vw, 520px);
-  overflow:hidden;
-  position:relative;
+  border: none;
 }
+
 .hero-media img{
-  width:auto;
+  width: auto;
   height: 100%;
   object-fit: contain;
-  margin-top:0em;
+  margin-top: 0;
 }
+
 .hero-media::after{
-  content:"";
-  position:absolute; inset:0;
-  pointer-events:none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
 .cta-row{
