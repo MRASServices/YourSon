@@ -12,7 +12,6 @@
   --pad: clamp(1rem, 3vw, 2rem);
 
   --h1: clamp(2.1rem, 3vw, 4.25rem);
-  --h2: clamp(1.4rem, 2.5vw, 2rem);
   --p: clamp(1rem, 1.2vw, 1.1rem);
 
   --btn: #161616;
@@ -64,9 +63,11 @@ header{
   width: 100%;
   justify-content: space-evenly; /* or space-between */
   align-items: center;
-  gap: 7rem; /* important: don't fight the spacing */
-  font-size: 1.1rem;  /* try 0.9rem, 1rem, 1.1rem */
+  gap: 7.25rem; /* important: don't fight the spacing */
+  font-size: 1.3rem;  /* try 0.9rem, 1rem, 1.1rem */
   letter-spacing: 0.25ch;
+  transform: scaley(0.8);
+
 }
 
 /* Make each link the same width */
@@ -138,9 +139,18 @@ h1{
   
 .special-word {
   color: rgb(255, 139, 23);
-  font-style: oblique; /* You can use color names, hex codes, or RGB values */}
+  font-style: oblique;}
 }
 
+.abt-h1{
+  font-size:clamp(4rem, 6vw, 7.25rem);
+  line-height:1.5;
+  font-weight: 250;
+  font-style: var(--shadow);
+  letter-spacing:0.165em;
+  margin-bottom: 1.5rem;
+  transform: scaley(0.7);
+}
 
 .lead{
   font-size: var(--p);
@@ -151,32 +161,56 @@ h1{
 
 .leadabt{
   font-size: var(--p);
-  color:var(--muted);
-  max-width: 88ch;
-  line-height:3ch;
+  color: #000000;
+  max-width: 100%;
+  line-height:1.6;
   margin: 0 auto;
+  text-align: justify;
+  border: 1px solid #000;
+  border-radius: 1px;
+  padding: 3rem;
+  background-color: rgba(255, 139, 23, 0.5);
 }
+
+.center-text {
+  text-align: center;
+  margin-top:1.5rem;
+  font-weight: 500;
+}
+
+.center-line{
+  display: block;      
+  text-align: center;  
+}
+
+.slogan-text{
+  font-weight: 500;
+  display: block;      
+  text-align: center; 
+}
+
 
 /* Base */
 .hero-media{
   overflow: hidden;
   position: relative;
-  border: none;            /* no !important */
+  border: none;           
 }
 
 /* With border (About, etc.) */
 .hero-media--border{
-  width: min(85rem, 100%);
-  height: clamp(240px, 38vw, 600px);
+  width: min(72rem, 100%);
+  height: clamp(240px, 38vw, 495px);
   border: 1.5px solid #000;
   border-radius: 1px;
 }
 
 /* No border (Index, etc.) */
 .hero-media--no-border{
-  width: min(62rem, 80%);
-  height: clamp(240px, 38vw, 520px);
+  width: min(65rem, 80%);
+  height: clamp(240px, 38vw, 650px);
   border: none;
+  margin-top: -5.3rem;
 }
 
 .hero-media img{
@@ -196,7 +230,7 @@ h1{
 .cta-row{
   display:flex;
   flex-wrap:wrap;
-  gap:3rem;
+  gap:6rem;
   margin-top: 3rem;
   align-items:center;
   justify-content: center;
@@ -215,9 +249,13 @@ h1{
   COLOR: rgb(0,0,0);
   font-variant: small-caps;
 }
+.btnshop{ 
+margin-top:2rem;
+margin-bottom: 1rem;}
+
 .btn.primary{ background: rgba(255, 139, 23, 0.36); color: RGB(0,0,0); border-color: transparent; }
 .btn.primary:hover{ background: rgb(255, 139, 23); }
-.btn.ghost:hover{ background: rgba(255, 139, 23); }
+.btn.ghost:hover{ background: rgb(255, 139, 23); }
 
 .contact{
   margin: 2.05rem auto 0;
@@ -328,8 +366,18 @@ h1{
   padding: clamp(1.25rem, 3vw, 2rem);
   box-shadow: 0 14px 44px rgba(0,0,0,.06);
 }
-.card h2{ margin:0 0 .5rem; font-size:var(--h2); }
-.card p{ margin:0; color:var(--muted); font-size:var(--p); }
+.card h2{ margin:0 0 .5rem; font-size:var(--h2); color:#000000;}
+.card p{ margin:0; color:#000000; font-size:var(--p); }
+
+.spccard{ background: rgba(255, 139, 23, 0.5);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: var(--radius);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: 0 14px 44px rgba(0,0,0,.06);
+}
+.spccard h2{ margin:0 0 .5rem; font-size:var(--h2); color:#000000;}
+.spccard p{ margin:0; color:#000000; font-size:var(--p); }
+
 
 /* Appointments page blocks */
 .grid-3{

@@ -8,14 +8,10 @@ const STORE_KEY = "demo_cart_v1";
 
 // Neutral, non-demo products (rename/price as you like)
 const PRODUCTS = [
-  { id: "p1", name: "All-Purpose Cleaner", price: 14.00, note: "Fresh, non-abrasive formula" },
-  { id: "p2", name: "Wood Conditioning Oil", price: 22.00, note: "For finished wood surfaces" },
-  { id: "p3", name: "Microfiber Cloth Set", price: 12.00, note: "Lint-free + reusable" },
-  { id: "p4", name: "Workshop Hand Balm", price: 16.00, note: "Quick-absorbing, non-greasy" },
-  { id: "p5", name: "Garden Gloves", price: 18.00, note: "Comfort fit, durable grip" },
-  { id: "p6", name: "Compact Tool Pouch", price: 28.00, note: "Everyday carry organizer" },
-  { id: "p7", name: "Protective Floor Pads", price: 10.00, note: "Furniture + ladder friendly" },
-  { id: "p8", name: "Painter’s Tape (2-Pack)", price: 9.00, note: "Clean lines, easy removal" },
+  { id: "p1", name: "Your Son's Cap", price: 35.00, note: "Produced from stitch to label in Ontario, Canada" },
+  { id: "p2", name: "Your Son's Toque", price: 35.00, note: "Produced from stitch to label in Ontario, Canada." },
+  { id: "p3", name: "Your Son's Trousers", price: 55.00, note: "Produced from stitch to label in Ontario, Canada." },
+  { id: "p4", name: "Oak Stave Centrepiece", price: 75.00, note: "Reclaimed oak whisky barrel stave from Salaberry-de-Valleyfield, Quebec." },
 ];
 
 function money(n){ return `$${n.toFixed(2)}`; }
