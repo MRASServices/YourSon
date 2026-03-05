@@ -148,6 +148,7 @@ h1{
   line-height:1.5;
   font-weight: 250;
   font-style: var(--shadow);
+
   letter-spacing:0.165em;
   margin-bottom: 1.5rem;
   transform: scaley(0.7);
@@ -156,21 +157,21 @@ h1{
 .lead{
   font-size: var(--p);
   color:var(--muted);
-  max-width: 62ch;
+  max-width: 100ch;
   margin: 0 auto;
 }
 
 .leadabt{
-  font-size: var(--p);
+  font-size:clamp(1.2rem, 1.4vw, 1.4rem);
   color: #000000;
-  max-width: 100%;
+  max-width: 62ch;
   line-height:1.6;
   margin: 0 auto;
   text-align: justify;
   border: 1px solid #000;
   border-radius: 1px;
-  padding: 3rem;
-  background-color: rgba(255, 139, 23, 0.5);
+  padding: 2rem;
+  background-color: rgba(162, 52, 25, 0.8);
 }
 
 .center-text {
