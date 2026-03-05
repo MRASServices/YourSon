@@ -46,7 +46,7 @@ header{
   background: color-mix(in oklab, var(--bg), white 18%);
   border-bottom: 1px solid rgba(0,0,0,1);
   backdrop-filter: blur(10px);
-  margin-bottom: 1em;
+  margin-bottom: -1em;
 }
 
 .nav{
@@ -127,6 +127,7 @@ section{ padding: clamp(1.75rem, 4vw, 3rem) 0; }
   gap: clamp(0.75rem, 1vw, 1.75rem);
   justify-items: center;
   text-align: center;
+  
 }
 .kicker{ font-size:.95rem; color:var(--muted); letter-spacing:.02em; }
 h1{
