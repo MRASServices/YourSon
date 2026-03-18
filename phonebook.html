@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Son: About</title>
+  <meta name="description" content="About page." />
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Page-only styles for the contact card grid -->
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header id="siteHeader" data-open="false">
+    <div class="wrap">
+      <div class="nav">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+
+        <!-- DESKTOP NAV -->
+        <nav class="nav-links" aria-label="Primary">
+          <details class="nav-dropdown">
+            <summary>ABOUT</summary>
+            <div class="nav-menu">
+              <a href="about.html">About Your Son</a>
+              <a href="Gallery.html">Our Memories</a>
+            </div>
+          </details>
+
+          <details class="nav-dropdown">
+            <summary>SERVICES</summary>
+            <div class="nav-menu">
+              <a href="personal_services.html">Personal Services</a>
+              <a href="business_services.html">Business Services</a>
+              <a href="Our_Friends.html">Our Friends</a>
+            </div>
+          </details>
+
+          <a href="index.html">HOME</a>
+          <a href="goods.html">GOODS</a>
+
+          <details class="nav-dropdown">
+            <summary>CONTACT</summary>
+            <div class="nav-menu">
+              <a href="contact.html">Contact Info</a>
+              <a href="phonebook.html">Family Phonebook</a>
+            </div>
+          </details>
+        </nav>
+      </div>
+
+      <!-- MOBILE NAV -->
+      <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
+        <details class="mobile-dropdown">
+          <summary>ABOUT</summary>
+          <div class="mobile-submenu">
+            <a href="about.html">About Your Son</a>
+            <a href="Gallery.html">Our Memories</a>
+          </div>
+        </details>
+
+        <details class="mobile-dropdown">
+          <summary>SERVICES</summary>
+          <div class="mobile-submenu">
+            <a href="Personal_Services.html">Personal Services</a>
+            <a href="Business_Services.html">Business Services</a>
+            <a href="Our_Friends.html">Our Friends</a>
+          </div>
+        </details>
+
+        <a href="index.html">HOME</a>
+        <a href="goods.html">GOODS</a>
+
+        <details class="mobile-dropdown">
+          <summary>CONTACT</summary>
+          <div class="mobile-submenu">
+            <a href="contact.html">Contact Info</a>
+            <a href="phonebook.html">Family Phonebook</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <!-- ✅ Body replaced with Contact Cards -->
+  <main id="main">
+    <section>
+      <div class="wrap">
+       <div class="con-bio-top">
+        <h1>FAMILY PHONEBOOK</h1>
+                <div class="PHONEBOOK-sep-line" aria-hidden="true"></div>
+          <p class="p">When you're in a pinch, there's no one you'd rather have lend a hand than family; for Your Son, the folks listed here are exactly that. We promise that they are not only great at what they do, but they will care about you, too. </p>
+
+        </div>
+        <div class="phonebook-grid" aria-label="phonebook cards">
+          <!-- Card 1 -->
+          <article class="phonebook-card">
+            <div class="phonebook-avatar" aria-label="Jane Doe photo">
+              <!-- Option A: use a real image -->
+              <img src="assets/images/cindy.jpg" alt="John Smith"/>
+            </div>
+            <h3 class="phonebook-name">Cindy Miller</h3>
+            <p class="phonebook-role">Real Estate Broker</p>
+            <p class="phonebook-meta">Newmarket, ON</p>
+            <div class="phonebook-actions">
+              <a href="tel:+10000000000">Call</a>
+              <a href="mailto:jane@example.com">Email</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="phonebook-card">
+            <div class="phonebook-avatar" aria-label="John Smith photo">
+              <img src="assets/images/laurence.jpeg" alt="John Smith"/>
+            </div>
+            <h3 class="phonebook-name">Laurence Chua</h3>
+            <p class="phonebook-role">Mortgage Specialist</p>
+            <p class="phonebook-meta">GTA, ON</p>
+            <div class="phonebook-actions">
+              <a href="tel:+10000000000">Call</a>
+              <a href="mailto:john@example.com">Email</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="phonebook-card">
+            <div class="phonebook-avatar" aria-label="Alex Taylor photo">
+              <img src="assets/images/randy.jpeg" alt="John Smith"/>
+              <div class="phonebook-initials">AT</div>
+            </div>
+            <h3 class="phonebook-name">Randy Smith</h3>
+            <p class="phonebook-role">Personal Training</p>
+            <p class="phonebook-meta">Gormley, ON</p>
+            <div class="phonebook-actions">
+              <a href="tel:+10000000000">Call</a>
+              <a href="mailto:alex@example.com">Email</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-image"><img src="assets/images/MIC.png" alt="Made In Canada"></div>
+        <div class="footer-text">© <span data-year></span> your son</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

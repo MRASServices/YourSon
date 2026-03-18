@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Son: Services</title>
+  <meta name="description" content="Services page." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header id="siteHeader" data-open="false">
+    <div class="wrap">
+      <div class="nav">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+
+        <nav class="nav-links" aria-label="Primary">
+          <details class="nav-dropdown">
+            <summary>ABOUT</summary>
+            <div class="nav-menu">
+              <a href="about.html">About Your Son</a>
+              <a href="Gallery.html">Our Memories</a>
+            </div>
+          </details>
+
+          <details class="nav-dropdown">
+            <summary>SERVICES</summary>
+            <div class="nav-menu">
+              <a href="personal_services.html">Personal Services</a>
+              <a href="business_services.html">Business Services</a>
+              <a href="Our_Friends.html">Our Friends</a>
+            </div>
+          </details>
+
+          <a href="index.html">HOME</a>
+
+          <a href="goods.html">GOODS</a>
+
+          <details class="nav-dropdown">
+            <summary>CONTACT</summary>
+            <div class="nav-menu">
+              <a href="contact.html">Contact Info</a>
+              <a href="phonebook.html">Family Phonebook</a>
+            </div>
+          </details>
+        </nav>
+      </div>
+
+      <!-- MOBILE NAV -->
+      <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
+      <details class="mobile-dropdown">
+          <summary>ABOUT</summary>
+          <div class="mobile-submenu">
+              <a href="about.html">About Your Son</a>
+              <a href="Gallery.html">Our Memories</a>
+          </div>
+        </details>
+
+        <!-- Services dropdown (mobile) -->
+        <details class="mobile-dropdown">
+          <summary>SERVICES</summary>
+          <div class="mobile-submenu">
+            <a href="Personal_Services.html">Personal Services</a>
+            <a href="Business_Services.html">Business Services</a>
+            <a href="Our_Friends.html">Our Friends</a>
+          </div>
+        </details>
+
+        <a href="index.html">HOME</a>
+
+        <a href="goods.html">GOODS</a>
+
+<details class="mobile-dropdown">
+          <summary>CONTACT</summary>
+          <div class="mobile-submenu">
+            <a href="contact.html">Contact Info</a>
+              <a href="phonebook.html">Family Phonebook</a>
+          </div>
+        </details>     
+       </div>
+    </div>
+  </header>
+
+  <section class="ps-two-col">
+    <div class="ps-bio-box">
+      <div class="ps-bio-top">
+        <h1>PERSONAL SERVICES</h1>
+        <div class="subtitle"></div>
+
+        <div class="ps-sep-line" aria-hidden="true"></div>
+
+        <p class="about-paragraph">
+          Please keep in mind that we are constantly adding to the personal services list, below. This means that just because you don't yet see <em>exactly</em> what you're looking for, doesn't necessarily mean that you're completely up the creek without a paddle. Better yet, why not give <em>Your Son</em> a
+          <button type="button" class="ps-inline-contact-btn" id="openCall">call</button>
+          or
+          <button type="button" class="ps-inline-contact-btn" id="openWrite">write</button>
+          to us — we can figure it out together.
+        </p>
+
+        <div class="ps-service-search-wrap" aria-label="Search services">
+          <div class="ps-service-search">
+            <input id="serviceSearch" type="text" placeholder='Search (e.g."Gardening")' autocomplete="off" />
+            <button id="clearSearch" type="button">CLEAR</button>
+          </div>
+        </div>
+        <div id="searchStatus" class="ps-search-status" aria-live="polite"></div>
+
+        <div class="ps-mini-box-grid" aria-label="Services categories">
+          <details class="ps-mini-box">
+            <summary class="ps-mini-summary">
+              <div class="ps-mini-content">
+                <h3>Transportation</h3>
+              </div>
+            </summary>
+            <div class="ps-mini-panel">
+              <ul>
+                <li>LIVERY SERVICE</li>
+                <li>APPOINTMENT DROPOFF/PICK-UP</li>
+                <li>WORKPLACE TRANSPORTATION</li>
+                <li>SCHOOL DROPOFF/PICK-UP</li>
+                <li>EXTRACURRICULAR TRANSPORTATION</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="ps-mini-box">
+            <summary class="ps-mini-summary">
+              <div class="ps-mini-content">
+                <h3>Errands</h3>
+              </div>
+            </summary>
+            <div class="ps-mini-panel">
+              <ul>
+                <li>GROCERY DELIVERY</li>
+                <li>DRYCLEANING</li>
+                <li>SHOPPING</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="ps-mini-box">
+            <summary class="ps-mini-summary">
+              <div class="ps-mini-content">
+                <h3>Pet Care</h3>
+              </div>
+            </summary>
+            <div class="ps-mini-panel">
+              <ul>
+                <li>DOG WALKING</li>
+                <li>PET SITTING</li>
+                <li>PET APPOINTMENTS</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="ps-mini-box">
+            <summary class="ps-mini-summary">
+              <div class="ps-mini-content">
+                <h3>Organization</h3>
+              </div>
+            </summary>
+            <div class="ps-mini-panel">
+              <ul>
+                <li>HOME CLEANING</li>
+                <li>GARAGE CLEAN/ORGANIZE</li>
+                <li>JUNK REMOVAL</li>
+                <li>ONLINE ITEM SALES</li>
+                <li>CLOSET REORGANIZING</li>
+                <li>ROOM(S) ORGANIZATION</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="ps-mini-box">
+            <summary class="ps-mini-summary">
+              <div class="ps-mini-content">
+                <h3>Inside the House</h3>
+              </div>
+            </summary>
+            <div class="ps-mini-panel">
+              <ul>
+                <li>FURNITURE ASSEMBLY</li>
+                <li>DOOR HANGING</li>
+                <li>FRAMING &amp; DRYWALLING</li>
+                <li>TRIM WORK</li>
+                <li>TV MOUNTING</li>
+                <li>PAINTING</li>
+                <li>LIGHT FIXTURE REPLACEMENT</li>
+                <li>GROUT CLEANING</li>
+                <li>TUB RESURFACING</li>
+                <li>HOUSE SITTING</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="ps-mini-box">
+            <summary class="ps-mini-summary">
+              <div class="ps-mini-content">
+                <h3>Outside the House</h3>
+              </div>
+            </summary>
+            <div class="ps-mini-panel">
+              <ul>
+                <li>GARDENING</li>
+                <li>LANDSCAPING</li>
+                <li>TREE/HEDGE TRIMMING</li>
+                <li>DECK BUILDING/MAINTENANCE</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <footer>
+      <div class="footer">
+        <div class="footer-image"><img src="assets/images/MIC.png" alt="Made In Canada"></div>
+                <div class="footer-text">© <span data-year></span> your son</div>
+      </div>
+    </footer>
+</main>
+
+<!-- CALL modal -->
+<div class="ps-contact-modal" id="callModal" aria-hidden="true">
+  <div class="ps-contact-backdrop" data-ps-close="true"></div>
+
+  <div class="ps-contact-dialog" role="dialog" aria-modal="true" aria-labelledby="callTitle">
+    <button class="ps-contact-close" type="button" aria-label="Close" data-ps-close="true">×</button>
+    <h2 id="callTitle">Call Your Son</h2>
+
+    <div class="ps-contact-actions single">
+      <a class="ps-contact-action" href="tel:+12892318387">Call</a>
+    </div>
+
+    <div class="contact-meta">This will open your phone app.</div>
+  </div>
+</div>
+
+<!-- WRITE modal -->
+<div class="ps-contact-modal" id="writeModal" aria-hidden="true">
+  <div class="ps-contact-backdrop" data-ps-close="true"></div>
+
+  <div class="ps-contact-dialog" role="dialog" aria-modal="true" aria-labelledby="writeTitle">
+    <button class="ps-contact-close" type="button" aria-label="Close" data-ps-close="true">×</button>
+    <h2 id="writeTitle">Write Your Son</h2>
+
+    <div class="ps-contact-actions">
+      <button class="ps-contact-action" id="openTextForm" type="button">Text</button>
+      <a class="ps-contact-action" href="mailto:connectwith@yourson.ca">Email</a>
+    </div>
+
+    <div class="ps-text-form-wrap" id="textFormWrap" aria-label="Send a text from this website">
+      <form class="ps-text-form" method="POST" target="_blank"
+        action="https://formsubmit.co/2892318387@msg.koodomobile.com">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_subject" value="New text from YourSon.ca (Personal Services)">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_captcha" value="true">
+
+        <div class="form-row">
+          <input name="name" type="text" placeholder="Your name" />
+          <input name="reply_to" type="email" placeholder="Your email" />
+        </div>
+
+        <textarea name="message" placeholder="Your message" required></textarea>
+
+        <button class="ps-contact-action" type="submit">Send</button>
+      </form>
+    </div>
+
+    <div class="contact-meta">Choose Text or Email.</div>
+  </div>
+</div>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Son: Our Friends</title>
+  <meta name="description" content="Our Friends directory." />
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Page-only styles (safe + self-contained) -->
+  
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- KEEP YOUR SAME HEADER / NAV -->
+  <header id="siteHeader" data-open="false">
+    <div class="wrap">
+      <div class="nav">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+
+        <nav class="nav-links" aria-label="Primary">
+          <details class="nav-dropdown">
+            <summary>ABOUT</summary>
+            <div class="nav-menu">
+              <a href="about.html">About Your Son</a>
+              <a href="Gallery.html">Our Memories</a>
+            </div>
+          </details>
+
+          <details class="nav-dropdown">
+            <summary>SERVICES</summary>
+            <div class="nav-menu">
+              <a href="personal_services.html">Personal Services</a>
+              <a href="business_services.html">Business Services</a>
+              <a href="Our_Friends.html">Our Friends</a>
+            </div>
+          </details>
+
+          <a href="index.html">HOME</a>
+          <a href="goods.html">GOODS</a>
+
+          <details class="nav-dropdown">
+            <summary>CONTACT</summary>
+            <div class="nav-menu">
+              <a href="contact.html">Contact Info</a>
+              <a href="phonebook.html">Family Phonebook</a>
+            </div>
+          </details>
+        </nav>
+      </div>
+
+      <!-- MOBILE NAV -->
+      <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
+        <details class="mobile-dropdown">
+          <summary>ABOUT</summary>
+          <div class="mobile-submenu">
+            <a href="about.html">About Your Son</a>
+            <a href="Gallery.html">Our Memories</a>
+          </div>
+        </details>
+
+        <details class="mobile-dropdown">
+          <summary>SERVICES</summary>
+          <div class="mobile-submenu">
+            <a href="Personal_Services.html">Personal Services</a>
+            <a href="Business_Services.html">Business Services</a>
+            <a href="Our_Friends.html">Our Friends</a>
+          </div>
+        </details>
+
+        <a href="index.html">HOME</a>
+        <a href="goods.html">GOODS</a>
+
+        <details class="mobile-dropdown">
+          <summary>CONTACT</summary>
+          <div class="mobile-submenu">
+            <a href="contact.html">Contact Info</a>
+            <a href="phonebook.html">Family Phonebook</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== OUR FRIENDS DIRECTORY (3 across / 1 across) ===== -->
+  <main id="main">
+    <section>
+      <div class="wrap">
+       <div class="con-bio-top">
+        <h1>A FRIEND OF YOUR SON</h1>
+                <div class="con-sep-line" aria-hidden="true"></div>
+          <p>Your Son has a lot of friends, some of whom are employed but yearning for a change; while others are happily self-removed from the workforce, yet looking to dedicate their time to the appropriate team. You'll find them, and an overview of their experiences and skills, here. <br> <br> Though anonymous, should you or someone you know wish to connect with one of our friends, just let us know. Your Son would be more than happy to make an introduction! </p>
+        </div>
+
+        <div class="friends-grid" aria-label="Friends directory">
+          <!-- Friend 1 -->
+          <a class="friend-card" href="FRIEND_FOLDER/Friend_one.html">
+            <div class="friend-avatar" aria-label="xxxx">
+              <img src="assets/images/Contact_Logo.png" alt="Jane Doe">
+              <div class="friend-initials"></div>
+            </div>
+            <h3 class="friend-name">G. C.</h3>
+            <p class="friend-role">Part-time</p>
+            <p class="friend-summary">Administrative • Customer Service</p>
+            <div class="friend-hint">View profile</div>
+          </a>
+
+          <!-- Friend 2 -->
+          <a class="friend-card" href="FRIEND_FOLDER/Friend_two.html">
+            <div class="friend-avatar" aria-label="xxxx">
+              <img src="assets/images/Contact_Logo.png" alt="Jane Doe">
+            </div>
+            <h3 class="friend-name">J. S.</h3>
+            <p class="friend-role">Full-time</p>
+            <p class="friend-summary">Managerial • Fashion • Commercial</p>
+            <div class="friend-hint">View profile</div>
+          </a>
+
+          <!-- Friend 3 -->
+          <a class="friend-card" href="Friend_one.html">
+            <div class="friend-avatar" aria-label=" xxxx">
+              <img src="assets/images/You_Contact_Logo.png" alt="Jane Doe">
+            </div>
+            <h3 class="friend-name">YOU</h3>
+            <p class="friend-role">Full-time</p>
+            <p class="friend-summary">interested in joining our list?</p>
+            <div class="friend-hint">Find Out More</div>
+          </a>
+
+          <!-- Add more friend cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-image"><img src="assets/images/MIC.png" alt="Made In Canada"></div>
+        <div class="footer-text">© <span data-year></span> your son</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

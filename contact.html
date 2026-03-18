@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Son: Contact</title>
+  <meta name="description" content="Contact page." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header id="siteHeader" data-open="false">
+    <div class="wrap">
+      <div class="nav">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+
+        <nav class="nav-links" aria-label="Primary">
+          <details class="nav-dropdown">
+            <summary>ABOUT</summary>
+            <div class="nav-menu">
+              <a href="about.html">About Your Son</a>
+              <a href="Gallery.html">Our Memories</a>
+            </div>
+          </details>
+
+          <details class="nav-dropdown">
+            <summary>SERVICES</summary>
+            <div class="nav-menu">
+              <a href="personal_services.html">Personal Services</a>
+              <a href="business_services.html">Business Services</a>
+              <a href="Our_Friends.html">Our Friends</a>
+            </div>
+          </details>
+
+          <a href="index.html">HOME</a>
+
+          <a href="goods.html">GOODS</a>
+
+          <details class="nav-dropdown">
+            <summary>CONTACT</summary>
+            <div class="nav-menu">
+              <a href="contact.html">Contact Info</a>
+              <a href="phonebook.html">Family Phonebook</a>
+            </div>
+          </details>
+        </nav>
+      </div>
+
+      <!-- MOBILE NAV -->
+      <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
+        <details class="mobile-dropdown">
+          <summary>ABOUT</summary>
+          <div class="mobile-submenu">
+            <a href="about.html">About Your Son</a>
+            <a href="Gallery.html">Our Memories</a>
+          </div>
+        </details>
+
+        <details class="mobile-dropdown">
+          <summary>SERVICES</summary>
+          <div class="mobile-submenu">
+            <a href="Personal_Services.html">Personal Services</a>
+            <a href="Business_Services.html">Business Services</a>
+            <a href="Our_Friends.html">Our Friends</a>
+          </div>
+        </details>
+
+        <a href="index.html">HOME</a>
+        <a href="goods.html">GOODS</a>
+
+        <details class="mobile-dropdown">
+          <summary>CONTACT</summary>
+          <div class="mobile-submenu">
+            <a href="contact.html">Contact Info</a>
+            <a href="phonebook.html">Family Phonebook</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="con-two-col">
+      <div class="con-bio-box">
+        <div class="con-bio-top">
+          <h1>CONTACT</h1>
+          <div class="con-sep-line" aria-hidden="true"></div>
+          <p class="p">Reach out with a quick message, or use appointments if you already know what you need.</p>
+        </div>
+
+        <div class="wrap"> 
+          <div class="two-col">
+
+            <div class="cta-row-con" style="justify-content:space-evenly;">
+              <a class="btn ghost-con" href="tel:+12892318387">call</a>
+              <!-- Optional: add a prefilled message after body= -->
+              <a class="btn ghost-con" href="sms:+12892318387?&body=Hi%20Your%20Son%20—%20I%20need%20help%20with%3A%20">text</a>
+            </div>
+
+            <div class="con-shell">
+              <div class="card">
+                <h2>send your son an email</h2>
+
+                <form class="form"
+                      name="contact"
+                      method="POST"
+                      data-netlify="true"
+                      netlify-honeypot="bot-field"
+                      action="/contact-success.html">
+
+                  <!-- Required hidden field -->
+                  <input type="hidden" name="form-name" value="contact">
+
+                  <!-- Honeypot (spam trap) -->
+                  <p style="display:none;">
+                    <label>Don’t fill this out: <input name="bot-field" /></label>
+                  </p>
+
+                  <div class="row">
+                    <div>
+                      <label-con for="name">name</label-con>
+                      <input id="name" name="name" autocomplete="name" required />
+                    </div>
+
+                    <div>
+                      <label-con for="email">email</label-con>
+                      <input id="email" name="email" type="email" autocomplete="email" required />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label-con for="phone">phone (optional)</label-con>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" />
+                  </div>
+
+                  <div>
+                    <label-con for="message">message</label-con>
+                    <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+                  </div>
+
+                  <button class="btn primary" type="submit">send</button>
+                </form>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="special-word-con">
+          <p>gta • newmarket, on<br/>connectwith@yourson.ca<br>289-231-8387</p>
+        </div>
+
+        <div class="special-word-con-two">
+          <p>
+            <span class="hours-info">hours</span> <br>
+            <span class="days-info">monday - saturday</span> <br>
+            7:00-23:00<br>
+            <span class="days-info">sunday</span> <br>
+            7:00-20:00
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-image"><img src="assets/images/MIC.png" alt="Made In Canada"></div>
+        <div class="footer-text">© <span data-year></span> your son</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

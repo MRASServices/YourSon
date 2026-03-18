@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Son: GARMENTS & GOODS</title>
+  <meta name="description" content="Shop page (demo). Includes localStorage cart and responsive product grid." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <a class="skip" href="#mainshop">Skip to content</a>
+
+  <header id="siteHeader" data-open="false">
+    <div class="wrap">
+      <div class="nav">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+
+        <nav class="nav-links" aria-label="Primary">
+          <details class="nav-dropdown">
+            <summary>ABOUT</summary>
+            <div class="nav-menu">
+              <a href="about.html">About Your Son</a>
+              <a href="Gallery.html">Our Memories</a>
+            </div>
+          </details>
+
+          <details class="nav-dropdown">
+            <summary>SERVICES</summary>
+            <div class="nav-menu">
+              <a href="personal_services.html">Personal Services</a>
+              <a href="business_services.html">Business Services</a>
+              <a href="Our_Friends.html">Our Friends</a>
+            </div>
+          </details>
+
+          <a href="index.html">HOME</a>
+          <a href="goods.html">GOODS</a>
+
+          <details class="nav-dropdown">
+            <summary>CONTACT</summary>
+            <div class="nav-menu">
+              <a href="contact.html">Contact Info</a>
+              <a href="phonebook.html">Family Phonebook</a>
+            </div>
+          </details>
+        </nav>
+      </div>
+
+      <!-- MOBILE NAV -->
+      <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
+        <details class="mobile-dropdown">
+          <summary>ABOUT</summary>
+          <div class="mobile-submenu">
+            <a href="about.html">About Your Son</a>
+            <a href="Gallery.html">Our Memories</a>
+          </div>
+        </details>
+
+        <details class="mobile-dropdown">
+          <summary>SERVICES</summary>
+          <div class="mobile-submenu">
+            <a href="Personal_Services.html">Personal Services</a>
+            <a href="Business_Services.html">Business Services</a>
+            <a href="Our_Friends.html">Our Friends</a>
+          </div>
+        </details>
+
+        <a href="index.html">HOME</a>
+        <a href="goods.html">GOODS</a>
+
+        <details class="mobile-dropdown">
+          <summary>CONTACT</summary>
+          <div class="mobile-submenu">
+            <a href="contact.html">Contact Info</a>
+            <a href="phonebook.html">Family Phonebook</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainshop">
+    <!-- Page Title -->
+    <section class="GaG-two-col">
+      <div class="GaG-bio-box">
+        <div class="GaG-bio-top">
+          <h1>GARMENTS &amp; GOODS</h1>
+          <div class="GaG-sep-line" aria-hidden="true"></div>
+          <p>Your Son has always been both industrious and creative. From digging holes on the beach in search of even more sand; to the crafting of macaroni necklaces; and even that time when we decided to draw on the walls using your favourite designer lipstick. <br> <br> That's right, we've always had it in us - and now we want to share some of it with you, while also supporting Canadian businesses. Everything that we offer is fully made in Canada: from stitch to label, start to finish; only Cannuck hands have held these garments and goods. 
+        </div>
+      </div>
+    </secion>
+
+    <!-- Product Grid -->
+    <section>
+      <div class="wrap">
+        <div class="shop-grid" id="shopGrid" aria-label="Product grid">
+          <!-- Populated by site.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Shipping / Pickup -->
+    <section>
+      <div class="wrap">
+        <div class="two-col">
+          <div class="card">
+            <h2>Shipping &amp; pickup</h2>
+            <p>Add your real policy (pickup windows, local drop-off, shipping cutoff times).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-image">
+          <img src="assets/images/MIC.png" alt="Made In Canada">
+        </div>
+        <div class="footer-text">© <span data-year></span> your son</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/site.js?v=5"></script>
+</body>
+</html>
