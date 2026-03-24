@@ -5,7 +5,7 @@
 
   --bg: rgba(255, 249, 231);
   --ink: rgba(22, 22, 22, 1);
-  --muted: rgba(22,22,22,.9);
+  --muted: rgba(22,22,22,1);
   --line: rgba(22, 22, 22, 1);
   --card: #ffffff;
 
@@ -61,7 +61,7 @@ body.about .about-two-col::before{
   z-index: -1;
   pointer-events: none;
   background: #FFF9E7;
-  background: linear-gradient(180deg, rgba(255, 249, 231, 0.4) 0%, rgba(255, 249, 231, 0) 16%, rgba(255, 249, 231, 0) 50%, rgba(255, 249, 231, 0) 75%, rgba(255, 249, 231, 0) 100%);
+  background: linear-gradient(180deg, rgba(255, 249, 231, 0.9) 0%, rgba(255, 249, 231, 0) 16%, rgba(255, 249, 231, 0) 50%, rgba(255, 249, 231, 0) 75%, rgba(255, 249, 231, 0) 100%);
 }
 
 body.about .about-bio-box{
@@ -470,7 +470,7 @@ footer.about{
   width: 100%;
 }
 
-.about-bio-box p{ letter-spacing: 0.2ch; font-weight: 300;}
+.about-bio-box p{ letter-spacing: 0.14ch; font-weight: 300;}
 .about-title h2{ margin-bottom:3rem; margin-top:0; font-size:clamp(2.1rem, 2.5vw, 3.25rem); color: rgb(255,249,231); font-weight: 250; font-variant: small-caps; letter-spacing: 0.2ch; text-align: center; }
 
 .about-two-col{
@@ -532,7 +532,7 @@ footer.about{
   margin-top: 3rem;
   align-items:center;
   justify-content: center;
-}
+} 
 
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
@@ -555,17 +555,17 @@ footer.about{
   margin-bottom: 1rem;
 }
 
-.btn.primary{ background:rgba(162, 52, 25, 0.9); color: RGB(0,0,0); border-width: 1px; border-color: #000000; }
-.btn.primary:hover{ background:rgb(162, 52, 25); transform: scale(99%);}
+.btn.primary{ background:rgba(162, 52, 25, 1); color: RGB(0,0,0); border-width: 1px; border-color: #000000; }
+.btn.primary:hover{ background:rgb(162, 52, 25); color: rgb(255, 249, 231); transform: scale(99%);}
 
 .btn.primaryindex { background:rgba(162, 52, 25, 1); color: RGB(0,0,0); border-width: 1px; border-color: #000000; }
-.btn.primaryindex:hover { transform: scale(98%);}
+.btn.primaryindex:hover { transform: scale(98%); color: rgb(255, 249, 231);}
 
-.btn.ghost{ background: rgba(162, 52, 25, 0.9); color: RGB(0,0,0); padding:0.5rem 6rem; font-size:1.1rem; font-weight:350; margin-top: -5rem;}
-.btn.ghost:hover{ background: rgba(162, 52, 25, 1); transform: scale(99%);}
+.btn.ghost{ background: rgba(162, 52, 25, 1); color: RGB(0,0,0); padding:0.5rem 6rem; font-size:1.1rem; font-weight:350; margin-top: -5rem;}
+.btn.ghost:hover{ background: rgba(162, 52, 25, 1); transform: scale(99%); color: rgb(255, 249, 231);}
 
-.btn.primary-shop{ background:rgba(162, 52, 25, 0.9); color: RGB(0,0,0); border-width: 1px; border-color: #000000; font-size:1.2rem;  font-weight:350;}
-.btn.primary-shop:hover{ background:rgb(162, 52, 25); transform: scale(99%);}
+.btn.primary-shop{ background:rgba(162, 52, 25, 1); color: RGB(0,0,0); border-width: 1px; border-color: #000000; font-size:1.2rem;  font-weight:350;}
+.btn.primary-shop:hover{ background:rgb(162, 52, 25); transform: scale(99%);color: rgb(255, 249, 231);}
 
 .contact{
   margin: 1.9rem auto -2.5rem;

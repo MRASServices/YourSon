@@ -16,7 +16,7 @@ const PRODUCTS = [
     image: "assets/images/coming_soon.png",
     specs: ["One size fits most", "Shaker Knit", "Embroidered Logo"],
     materials: ["100% Cotton"],
-    origin: ["Ontario, Canada"]
+    origin: ["Brampton, Ontario, Canada"]
   },
   {
     id: "p2",
@@ -42,9 +42,9 @@ const PRODUCTS = [
     id: "p4",
     name: "oak stave centrepiece",
     price: 0.00,
-    note: "Ever dreamed of finally owning a true part of Canadian history? Well, this isn't that. It's wood, but it does has candles!",
+    note: "Ever dreamed of finally owning a true part of Canadian history? Well, this isn't that. It's wood, but it does have candles!",
     image: "assets/images/coming_soon.png",
-    specs: ["Natural reclaimed shape", "Hand-finished"],
+    specs: ["Natural reclaimed shape", "Hand-finished", "Width: 1.5″ or less", "Length: approx. 35″"],
     materials: ["Reclaimed oak"], 
     origin: ["Salaberry-de-Valleyfield, Quebec, Canada"]
   },
@@ -55,8 +55,28 @@ const PRODUCTS = [
     note: "It really shouldn't take the Orange Man to remind us Canadians just how proud we are. Yet, here we are - again.",
     image: "assets/images/coming_soon.png",
     specs: ["Iron-on or sew-on"],
-    materials: ["Woven patch"],
+    materials: ["Woven patch, Embroidered"],
     origin: ["Newmarket, Ontario, Canada"]
+  },
+   {
+    id: "p6",
+    name: "bibliophile cutting board (set)",
+    price: 0.00,
+    note: "From bedtime stories to dinnertime recipes, we love our books. Now, introducing books you can cut on! Revolutionary.",
+    image: "assets/images/coming_soon.png",
+    specs: ["Individual (in): 12l * 10w * 1th", "Set (in): 12l * 10w * 3th"],
+    materials: ["Red Oak","Maple","Red Grandis"],
+    origin: ["Oshawa, Ontario, Canada"]
+  },
+   {
+    id: "p7",
+    name: "bibliophile cutting board (single)",
+    price: 0.00,
+    note: "We get it, sometimes three is a crowd. But much like Your Son, sometimes it pays to have <s>an only child</s> one cutting board.",
+    image: "assets/images/coming_soon.png",
+    specs: ["Measurement (in): 12l * 10w * 1th"],
+    materials: ["Red Oak","Maple","Red Grandis"],
+    origin: ["Oshawa, Ontario, Canada"]
   },
 ];
 
