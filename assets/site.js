@@ -78,6 +78,17 @@ const PRODUCTS = [
     materials: ["Red Oak","Maple","Red Grandis"],
     origin: ["Oshawa, Ontario, Canada"]
   },
+   {
+    id: "p8",
+    name: "Life can be a real Birch",
+    price: 0.00,
+    note: "There's something hauntingly poetic about birch bark being framed by the scorched remains of a fellow tree. Or is that psycopathic - nah, totally normal!",
+    image: "assets/images/coming_soon.png",
+    specs: ["Measurement (in): 11.75l x 9.75w"],
+    materials: ["Birch","Pine","polyurethane"],
+    origin: ["Whitchurch-Stouffville, Ontario, Canada"]
+      },
+
 ];
 
 function money(n){ return `$${n.toFixed(2)}`; }
