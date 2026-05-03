@@ -54,18 +54,14 @@ body.about .about-two-col{
 }
 
 /* The "shadow/contrast" layer */
-body.about .about-two-col::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: #FFF9E7;
-  background: linear-gradient(180deg, rgba(255, 249, 231, 0.9) 0%, rgba(255, 249, 231, 0) 16%, rgba(255, 249, 231, 0) 50%, rgba(255, 249, 231, 0) 75%, rgba(255, 249, 231, 0) 100%);
-}
 
 body.about .about-bio-box{
-  background: transparent;
+  background: rgba(255,249,231, 0.95);
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 14px 44px rgba(0,0,0,0.25);
+  margin:5rem;
+  width: 80%;
 }
 
 a{ color:inherit; }
@@ -269,7 +265,7 @@ h1{
 .abt-h1{
   margin: -3rem 0 .75rem;
   font-size: var(--h1);
-  line-height: 1.25;
+  line-height: 1;
   font-weight: 200;
   letter-spacing: 0.02em;
 }
@@ -320,11 +316,12 @@ h1{
 .approach-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 3rem;
+  margin-bottom: 4rem;
 }
 
 .approach-card{
-  background: rgba(255,249,231,0.8);
+  background: rgba(255,249,231,1);
   border: 1px solid rgba(0,0,0,1);
   border-radius: 1px;
   padding: 2rem;
@@ -365,7 +362,7 @@ h1{
 
 .approach-title::after{
   content: "▾";
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   position: absolute;
   right: 50%;
   top: 53%;
@@ -382,6 +379,23 @@ h1{
   text-align: justify;
   transform: translateY(6px);
   transition: opacity .18s ease, transform .18s ease, max-height .22s ease;
+}
+
+.approach-box{
+  background: rgba(255,249,231, 0.95);
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 14px 44px rgba(0,0,0,0.25);
+  margin: 5rem auto;
+  width: 80%;
+  padding: clamp(18px, 0.5vw, 50px);
+  padding-left: 6em;
+  padding-right: 6em;
+  padding-bottom: 2em;
+}
+
+.approach-box .about-title h2{
+  color: #000;
 }
 
 .about-sr{
@@ -431,8 +445,8 @@ h1{
   height: auto;
   border: none;
   margin: auto;
-  margin-bottom:4rem;
-  box-shadow: 0px 0px 9px 10px  rgba(0,0,0,0.4);
+  margin-bottom: 4rem;
+  box-shadow: none;
 }
 
 footer.about{
@@ -440,24 +454,24 @@ footer.about{
   color: var(--muted);
   font-size: .95rem;
   border-top: 1px solid rgba(0,0,0,1);
-  background-color: rgba(255,249,231, 0.8);
+  background-color: rgba(255,249,231, 0.95);
 }
 
 .lead-about{
   font-size: var(--p);
   color: #000000;
   max-width: 100%;
-  line-height:1.8;
+  line-height: 1.8;
   text-align: justify;
-  border: 1px solid #000000;
-  border-radius: 20px;
-  padding: 2rem;
-  background-color:rgba(255,249,231, 0.8);
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
 }
 
 .about-bio-box{
   background: var(--accent-box);
-  border: 0px solid rgba(30,30,30,.20);
+  border: 0px solid rgba(30,30,30,.90);
   padding: clamp(12px, 0.5vw, 50px);
   padding-left: 8.75em;
   padding-right: 8.75em;
@@ -931,7 +945,7 @@ textarea{ min-height: 110px; resize: vertical; }
 
 /* Footer */
 .footer-image{
-  width: min(3.5rem, 50%);
+  width: min(2rem, 30%);
   height: auto;
   border: none;
   position: left;
