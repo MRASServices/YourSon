@@ -80,12 +80,12 @@ const PRODUCTS = [
   },
    {
     id: "p8",
-    name: "Life can be a real Birch",
+    name: "life can be a real birch",
     price: 0.00,
-    note: "There's something hauntingly poetic about birch bark being framed by the scorched remains of a fellow tree. Or is that psycopathic - nah, totally normal!",
+    note: "There's something poetic about birch bark, framed within the scorched remains of it's fellow tree. Anyone know a therapist?",
     image: "assets/images/coming_soon.png",
     specs: ["Measurement (in): 11.75l x 9.75w"],
-    materials: ["Birch","Pine","polyurethane"],
+    materials: ["Birch","Pine","Polyurethane"],
     origin: ["Whitchurch-Stouffville, Ontario, Canada"]
       },
 

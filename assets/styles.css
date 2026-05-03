@@ -60,7 +60,7 @@ body.about .about-bio-box{
   border: 1px solid #000;
   border-radius: 10px;
   box-shadow: 0 14px 44px rgba(0,0,0,0.25);
-  margin:5rem;
+  margin:1rem;
   width: 80%;
 }
 
@@ -255,7 +255,10 @@ h1{
   line-height: 1.25;
   font-weight: 200;
   letter-spacing: 0.02em;
+  color:rgb(0,0,0);
 }
+
+.slogan{ font-size:.95rem; color:var(--muted); letter-spacing:.02em;color: #000000; }
 
 .special-word{
   color: rgb(162, 52, 25);
@@ -322,7 +325,7 @@ h1{
 
 .approach-card{
   background: rgba(255,249,231,1);
-  border: 1px solid rgba(0,0,0,1);
+  border: 1.5px solid rgba(0,0,0,1);
   border-radius: 1px;
   padding: 2rem;
   font-weight: 350;
@@ -354,15 +357,15 @@ h1{
   text-align: center;
   margin: 0;
   padding: 1rem;
-  letter-spacing: 0.15ch;
+  letter-spacing: 0.20em;
   font-weight: 300;
-  font-size: 1.75rem;
-  color:#000000;
+  font-size: 23px;
+  color:rgba(162, 52, 25, 1);
 }
 
 .approach-title::after{
   content: "▾";
-  color: #000000;
+  color: rgba(162, 52, 25, 1);
   position: absolute;
   right: 50%;
   top: 53%;
@@ -505,12 +508,13 @@ footer.about{
   margin-top: 1rem;
   text-align: center;
   transform: scaleY(0.75);
+  color:rgb(162, 52, 25);
 }
 
 .about-sep-line{
-  margin: 10px auto 80px;
-  width: 90%;
-  border-top: 2px solid rgba(0,0,0,1);
+  margin: 5px auto 50px;
+  width: 100%;
+  border-top: 1px solid rgba(0,0,0,1);
 }
 
 /* No border */
@@ -1104,7 +1108,8 @@ footer{
 
 .GaG-bio-top h1{
   font-family: var(--font);
-  font-weight: 100;
+  color:rgb(162, 52, 25);
+  font-weight: 200;
   font-size: clamp(40px, 4.25vw, 70px);
   letter-spacing: .25em;
   word-spacing: 1rem;
@@ -1142,7 +1147,7 @@ footer{
 
 .con-bio-top h1{
   font-family: var(--font);
-  font-weight: 100;
+  font-weight: 200;
   font-size: clamp(40px, 4.25vw, 70px);
   letter-spacing: .25em;
   word-spacing: 1rem;
@@ -1150,6 +1155,7 @@ footer{
   margin-top: 2rem;
   text-align: center;
   transform: scaleY(0.75);
+  color:rgb(162, 52, 25);
 }
 
 .con-bio-top .subtitle{
@@ -1272,7 +1278,7 @@ textarea{ min-height: 110px; resize: vertical; }
 
 .ps-bio-top h1{
   font-family: var(--font);
-  font-weight: 100;
+  font-weight: 200;
   font-size: clamp(40px, 4.25vw, 70px);
   letter-spacing: .25em;
   word-spacing: 1rem;
@@ -1280,6 +1286,7 @@ textarea{ min-height: 110px; resize: vertical; }
   margin-top: 2rem;
   text-align: center;
   transform: scaleY(0.75);
+  color:rgb(162, 52, 25);
 }
 
 .ps-bio-top .subtitle{
