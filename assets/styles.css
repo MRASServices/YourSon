@@ -379,7 +379,7 @@ h1{
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  text-align: justify;
+  text-align: left;
   transform: translateY(6px);
   transition: opacity .18s ease, transform .18s ease, max-height .22s ease;
 }
@@ -1244,9 +1244,9 @@ textarea{ min-height: 110px; resize: vertical; }
 .btn.ghost-con{ background: rgba(162, 52, 25, 0.8); color: RGB(0,0,0); padding:0.5rem 6rem; font-size:1.1rem; font-weight:350;}
 .btn.ghost-con:hover{ background: rgba(162, 52, 25, 1); transform: scale(99%);}
 
-.special-word-con{line-height: 1.5rem; text-align: center; font-size: 0.9rem; font-variant: small-caps; letter-spacing: 0.1ch; font-weight: 350; margin-bottom: -4rem;margin-top: 3rem;}
+.special-word-con{line-height: 1.5rem; text-align: center; font-size: 0.9rem; font-variant: small-caps; letter-spacing: 0.1ch; font-weight: 350; margin-bottom: -3rem;margin-top: 4rem;}
 .special-word-con-two{line-height: 1.5rem; text-align: center; font-size: 0.9rem; font-variant: small-caps; letter-spacing: 0.1ch; font-weight: 350; margin-bottom: -4rem;margin-top: 4rem;}
-.hours-info{text-decoration: underline; font-weight: bold;}
+.hours-info{text-decoration: underline; font-weight: bold; margin-top:1rem;}
 .days-info{font-weight:bold}
 
 /* PERSONAL SERVICES */
@@ -1603,7 +1603,7 @@ details.ps-mini-box[open] .ps-mini-panel{
 .ps-contact-action:hover{
   transform: translateY(-1px);
   opacity: 1;
-  color: rgba(239,191,4,0.95);
+  color: rgb(162, 52, 25);
 }
 
 .ps-contact-close{
