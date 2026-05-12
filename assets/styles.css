@@ -520,7 +520,7 @@ footer.about{
 /* No border */
 .hero-media--no-border{
   width: min(90rem, 100%);
-  height: clamp(240px, 45vw, 650px);
+  height: clamp(240px, 50vw, 800px);
   border: none;
   margin-top: -3rem;
 }
