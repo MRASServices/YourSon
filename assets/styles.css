@@ -2468,7 +2468,7 @@ details.work-card:hover .work-overlay,
 
 @media (max-width: 760px){
   .btn.ghost{
-    margin-top: 20px;
+    margin-top: 2rem;
   }
 }
 
