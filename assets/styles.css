@@ -2466,5 +2466,13 @@ details.work-card:hover .work-overlay,
   }
 }
 
+@media (max-width: 760px){
+  .index-sep-line{
+    width: 100%;
+    margin: 6px auto;
+    border-top: 1px solid rgba(0,0,0,1);
+  }
+}
+
 
 }
