@@ -2444,7 +2444,7 @@ details.work-card:hover .work-overlay,
   .hero-media--about{
     width: 100%;
     height: auto;
-    margin: 0 auto 0.75rem;
+    margin: 0 auto 1.25rem;
   }
 
   .hero-media--about img{
