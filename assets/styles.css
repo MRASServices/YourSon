@@ -2420,9 +2420,12 @@ details.work-card:hover .work-overlay,
     margin-top: 0;
   }
 
-  .hero-media--about{
+  body.about .hero-media--about{
     width: 100%;
-    margin: 0 auto 1rem;
+    height: auto;
+    margin: 0 auto 0.75rem;
+    border: none;
+    box-shadow: none;
   }
 
   .approach-box{
@@ -2513,8 +2516,10 @@ details.work-card:hover .work-overlay,
 }
 
 @media (max-width: 760px){
-  .about-sep-line{
-    margin: 5px auto 0.75rem;
+ body.about .about-sep-line{
+    width: 100%;
+    margin: 0.25rem auto 0.75rem;
+    border-top: 1px solid rgba(0,0,0,1);
   }
 }
 
