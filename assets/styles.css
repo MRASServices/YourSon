@@ -2326,3 +2326,137 @@ details.work-card:hover .work-overlay,
   background: rgba(162,52,25,1);
   transform: translateY(-1px);
 }
+
+/* ============================
+   MOBILE CLEANUP
+   ============================ */
+
+@media (max-width: 760px){
+
+  html,
+  body{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .wrap{
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  section{
+    padding: 1.5rem 0;
+  }
+
+  h1,
+  .abt-h1,
+  .about-bio-top h1,
+  .ps-bio-top h1,
+  .con-bio-top h1,
+  .GaG-bio-top h1{
+    font-size: clamp(2rem, 10vw, 3rem);
+    letter-spacing: 0.12em;
+    word-spacing: 0.25rem;
+    line-height: 1.1;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero{
+    padding: 0 0 1rem;
+  }
+
+  .hero-media--no-border{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .hero-media--no-border img{
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+  }
+
+  .feature-grid{
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .feature-tile{
+    height: auto;
+    min-height: 170px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .feature-title{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 0.18ch;
+  }
+
+  body.about .about-bio-box,
+  .about-bio-box{
+    width: 92%;
+    margin: 1rem auto;
+    padding: 1.25rem;
+  }
+
+  .lead-about{
+    font-size: 0.95rem;
+    line-height: 1.65;
+    text-align: left;
+    letter-spacing: 0.08ch;
+  }
+
+  .hero-media--about{
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .approach-box{
+    width: 92%;
+    margin: 2rem auto;
+    padding: 1.25rem;
+  }
+
+  .approach-grid{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .approach-card{
+    min-height: 220px;
+    padding: 1.25rem;
+  }
+
+  .approach-title{
+    font-size: 1.2rem;
+    letter-spacing: 0.14em;
+  }
+
+  .approach-body{
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .btn,
+  .btn.ghost,
+  .btn.primary,
+  .btn.primaryindex,
+  .btn.primary-shop,
+  .btn.primary-con,
+  .btn.ghost-con{
+    width: min(100%, 320px);
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.16ch;
+    text-align: center;
+  }
+}
