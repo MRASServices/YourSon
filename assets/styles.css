@@ -2370,6 +2370,7 @@ details.work-card:hover .work-overlay,
     margin-bottom: 1.5rem;
   }
 
+  /* HOME HERO */
   .hero{
     padding: 0 0 1rem;
   }
@@ -2377,7 +2378,7 @@ details.work-card:hover .work-overlay,
   .hero-media--no-border{
     width: 100%;
     height: auto;
-    margin: 0 auto;
+    margin: 2rem auto 0;
   }
 
   .hero-media--no-border img{
@@ -2387,10 +2388,23 @@ details.work-card:hover .work-overlay,
     object-fit: contain;
   }
 
+  .btn.primaryindex{
+    display: none;
+  }
+
+  body.home .menu-btn{
+    display: none;
+  }
+
+  body.home .contact{
+    display: none;
+  }
+
+  /* HOME FEATURE GRID */
   .feature-grid{
     grid-template-columns: 1fr !important;
     gap: 1rem;
-    margin-top: 0rem;
+    margin-top: 0;
   }
 
   .feature-tile{
@@ -2405,11 +2419,38 @@ details.work-card:hover .work-overlay,
     letter-spacing: 0.18ch;
   }
 
+  .index-sep-line{
+    width: 100%;
+    margin: 6px auto;
+    border-top: 6px solid rgba(0,0,0,1);
+  }
+
+  .index-sep-line-2{
+    display: none;
+  }
+
+  /* ABOUT PAGE */
   body.about .about-bio-box,
   .about-bio-box{
     width: 92%;
     margin: 1rem auto;
     padding: 1.25rem;
+  }
+
+  .about-sep-line{
+    margin: 5px auto 0.75rem;
+  }
+
+  .hero-media--about{
+    width: 100%;
+    height: auto;
+    margin: 0 auto 0.75rem;
+  }
+
+  .hero-media--about img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   .lead-about{
@@ -2420,14 +2461,7 @@ details.work-card:hover .work-overlay,
     margin-top: 0;
   }
 
-  body.about .hero-media--about{
-    width: 100%;
-    height: auto;
-    margin: 0 auto 0.75rem;
-    border: none;
-    box-shadow: none;
-  }
-
+  /* APPROACH GRID */
   .approach-box{
     width: 92%;
     margin: 2rem auto;
@@ -2456,6 +2490,7 @@ details.work-card:hover .work-overlay,
     line-height: 1.5;
   }
 
+  /* BUTTONS */
   .btn,
   .btn.ghost,
   .btn.primary,
@@ -2470,58 +2505,7 @@ details.work-card:hover .work-overlay,
     text-align: center;
   }
 
-@media (max-width: 760px){
-  .btn.primaryindex{
-    display: none;
-  }
-}
-
-@media (max-width: 760px){
   .btn.ghost{
     margin-top: 2rem;
   }
-}
-
-@media (max-width: 760px){
-  .index-sep-line{
-    width: 100%;
-    margin: 6px auto;
-    border-top: 6px solid rgba(0,0,0,1);
-  }
-}
-
-@media (max-width: 760px){
-  .index-sep-line-2{
-  display: none;}
-}
-
-
-@media (max-width: 760px){
-  .hero-media--no-border{
-    margin-top: 2rem;
-  }
-}
-
-
-@media (max-width: 760px){
-  body.home .menu-btn{
-    display: none;
-  }
-}
-
-@media (max-width: 760px){
-  body.home .contact{
-    display: none;
-  }
-}
-
-@media (max-width: 760px){
- body.about .about-sep-line{
-    width: 100%;
-    margin: 0.25rem auto 0.75rem;
-    border-top: 1px solid rgba(0,0,0,1);
-  }
-}
-
-
 }
