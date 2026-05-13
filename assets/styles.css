@@ -2486,5 +2486,11 @@ details.work-card:hover .work-overlay,
   }
 }
 
+@media (max-width: 760px){
+  body.home .menu-btn{
+    display: none;
+  }
+}
+
 
 }
