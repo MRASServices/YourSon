@@ -2467,6 +2467,12 @@ details.work-card:hover .work-overlay,
 }
 
 @media (max-width: 760px){
+  .btn.ghost{
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 760px){
   .index-sep-line{
     width: 100%;
     margin: 6px auto;
