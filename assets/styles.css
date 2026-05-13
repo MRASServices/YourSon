@@ -2384,7 +2384,7 @@ details.work-card:hover .work-overlay,
   .feature-grid{
     grid-template-columns: 1fr !important;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 0rem;
   }
 
   .feature-tile{
