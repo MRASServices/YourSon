@@ -2508,4 +2508,14 @@ details.work-card:hover .work-overlay,
   .btn.ghost{
     margin-top: 2rem;
   }
+  
+}
+.mobile-break{
+  display: none;
+}
+
+@media (max-width: 760px){
+  .mobile-break{
+    display: block;
+  }
 }
