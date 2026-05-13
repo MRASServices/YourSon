@@ -2498,6 +2498,7 @@ details.work-card:hover .work-overlay,
   }
 }
 
+
 @media (max-width: 760px){
   body.home .menu-btn{
     display: none;
@@ -2510,4 +2511,15 @@ details.work-card:hover .work-overlay,
   }
 }
 
+@media (max-width: 760px){
+  .about-sep-line{
+    margin: 5px auto 0.75rem;
+  }
+}
+
+@media (max-width: 760px){
+  .hero-media--about{
+    margin-bottom: 1.25rem;
+  }
+}
 }
