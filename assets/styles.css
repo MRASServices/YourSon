@@ -519,6 +519,12 @@ footer.about{
   border-top: 1px solid rgba(0,0,0,1);
 }
 
+.index-sep-line-2{
+  margin: 10px auto 10px;
+  width: 70%;
+  border-top: 1px solid rgba(0,0,0,1);
+}
+
 /* No border */
 .hero-media--no-border{
   width: min(95rem, 100%);
@@ -2479,6 +2485,12 @@ details.work-card:hover .work-overlay,
     border-top: 6px solid rgba(0,0,0,1);
   }
 }
+
+@media (max-width: 760px){
+  .index-sep-line-2{
+  display: none;}
+}
+
 
 @media (max-width: 760px){
   .hero-media--no-border{
