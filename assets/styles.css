@@ -2417,8 +2417,13 @@ details.work-card:hover .work-overlay,
     line-height: 1.65;
     text-align: left;
     letter-spacing: 0.08ch;
+    margin-top: 0;
   }
 
+  .hero-media--about{
+    width: 100%;
+    margin: 0 auto 1rem;
+  }
 
   .approach-box{
     width: 92%;
@@ -2513,9 +2518,5 @@ details.work-card:hover .work-overlay,
   }
 }
 
-@media (max-width: 760px){
-  .hero-media--about{
-    margin-bottom: 1.25rem;
-  }
-}
+
 }
