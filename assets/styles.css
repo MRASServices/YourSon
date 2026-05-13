@@ -2459,4 +2459,12 @@ details.work-card:hover .work-overlay,
     letter-spacing: 0.16ch;
     text-align: center;
   }
+
+@media (max-width: 760px){
+  .btn.primaryindex{
+    display: none;
+  }
+}
+
+
 }
