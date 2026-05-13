@@ -2523,7 +2523,6 @@ details.work-card:hover .work-overlay,
 @media (max-width: 760px){
   .mobile-break{
     display: block;
-    line-height:1.5;
     
   }
 }
@@ -2541,4 +2540,13 @@ details.work-card:hover .work-overlay,
     margin: 0 auto;
   }
 
+}
+
+body.about .about-bio-top h1,
+body.about .abt-h1{
+  margin-bottom: 1.25rem;
+}
+
+body.about .about-sep-line{
+  margin: 0 auto 1.25rem;
 }
