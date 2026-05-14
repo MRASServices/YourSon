@@ -2703,10 +2703,3 @@ body.about .about-sep-line{
   }
 }
 
-@media (max-width: 760px){
-
-  .menu-btn{
-    margin-bottom: 1.5rem;
-  }
-
-}
