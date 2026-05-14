@@ -2689,3 +2689,16 @@ body.about .about-sep-line{
   }
 
 }
+.mobile-break{
+  display: none;
+}
+
+@media (max-width: 760px){
+  .mobile-break{
+    display: block;
+  }
+
+  .gag-title{
+    line-height: 1.25;
+  }
+}
