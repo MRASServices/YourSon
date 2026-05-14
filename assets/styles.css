@@ -2702,3 +2702,11 @@ body.about .about-sep-line{
     line-height: 1.25;
   }
 }
+
+@media (max-width: 760px){
+
+  .menu-btn{
+    margin-bottom: 1.5rem;
+  }
+
+}
