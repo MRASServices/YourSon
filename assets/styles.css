@@ -2654,3 +2654,11 @@ body.about .about-sep-line{
   }
 
 }
+
+@media (max-width: 760px){
+  .con-shell{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
