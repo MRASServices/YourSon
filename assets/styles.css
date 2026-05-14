@@ -2639,3 +2639,18 @@ body.about .about-sep-line{
     line-height: 1.5;
   }
 }
+
+@media (max-width: 760px){
+
+  .GaG-bio-box{
+    width: 92%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .GaG-bio-top p{
+    max-width: 100%;
+    width: 100%;
+  }
+
+}
