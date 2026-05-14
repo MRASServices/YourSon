@@ -2727,3 +2727,11 @@ body.contact-page .con-bio-box{
 body.contact-page .con-bio-top h1{
   margin-top: 1rem;
 }
+
+@media (max-width: 760px){
+
+  .GaG-two-col{
+    padding-top: 2rem;
+  }
+
+}
