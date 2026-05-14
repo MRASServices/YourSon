@@ -2708,3 +2708,9 @@ body.about .about-sep-line{
     margin-top: 3rem;
   }
 }
+
+@media (max-width: 760px){
+  .con-bio-top h1{
+    margin-top: 3rem;
+  }
+}
