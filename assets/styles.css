@@ -2655,10 +2655,15 @@ body.about .about-sep-line{
 
 }
 
-@media (max-width: 760px){
-  .con-shell{
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
+/* CONTACT PAGE - MOBILE EMAIL FORM WIDTH */
+.con-bio-box .wrap{
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.con-shell{
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
 }
