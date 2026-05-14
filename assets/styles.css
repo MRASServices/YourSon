@@ -2715,3 +2715,15 @@ body.about .about-sep-line{
   }
 }
 
+/* CONTACT PAGE - MOBILE HEADER/TITLE SPACING */
+body.contact-page .con-two-col{
+  padding-top: 0;
+}
+
+body.contact-page .con-bio-box{
+  margin-top: 0;
+}
+
+body.contact-page .con-bio-top h1{
+  margin-top: 0;
+}
