@@ -2714,3 +2714,12 @@ body.about .about-sep-line{
     margin-top: 3rem;
   }
 }
+
+/* CONTACT PAGE - MOBILE TITLE SPACING */
+.con-two-col{
+  padding-top: 0;
+}
+
+.con-bio-top h1{
+  margin-top: 0;
+}
