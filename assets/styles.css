@@ -2667,3 +2667,25 @@ body.about .about-sep-line{
   max-width: 100%;
   margin: 0 auto;
 }
+
+@media (max-width: 760px){
+
+  .menu-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .menu-btn img{
+    width: 70px;
+    height: auto;
+    display: block;
+  }
+
+}
