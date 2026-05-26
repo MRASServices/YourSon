@@ -2759,7 +2759,7 @@ body.contact-page .con-bio-top h1{
   .mobile-book-btn{
     width: min(100%, 200px);
     padding: 0.5rem 0.5rem;
-    font-size: 0.1rem;
+    font-size: 1rem;
     font-variant: small-caps;
     letter-spacing: 0.16ch;
     text-align: center;
