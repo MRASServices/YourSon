@@ -2736,3 +2736,32 @@ body.contact-page .con-bio-top h1{
   }
 
 }
+
+/* Hidden by default / desktop */
+.mobile-book-now{
+  display: none;
+}
+
+@media (max-width: 760px){
+
+  .mobile-book-now{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.25rem auto 1.5rem;
+    width: 100%;
+  }
+
+  .mobile-book-btn{
+    width: min(100%, 320px);
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+    font-variant: small-caps;
+    letter-spacing: 0.16ch;
+    text-align: center;
+    background: rgba(162, 52, 25, 1);
+    color: #000;
+    border: 1px solid #000;
+  }
+
+}
