@@ -2409,7 +2409,7 @@ details.work-card:hover .work-overlay,
   }
 
 #explore-grid{
-  padding-top: 0.5rem;
+  padding-top: 0rem!important;
 }
 
   .feature-tile{
