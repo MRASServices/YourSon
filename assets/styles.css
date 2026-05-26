@@ -2760,6 +2760,7 @@ body.contact-page .con-bio-top h1{
     width: min(100%, 200px);
     padding: 0.5rem 0.5rem;
     font-size: 1rem;
+    font-weight: bold;
     font-variant: small-caps;
     letter-spacing: 0.16ch;
     text-align: center;
