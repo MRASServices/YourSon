@@ -2752,12 +2752,12 @@ body.contact-page .con-bio-top h1{
     display: flex;
     justify-content: center;
     align-items: center;
-  margin: 1.5rem auto 0rem;
+  margin: 2rem auto 0rem;
     width: 100%;
   }
 
   .mobile-book-btn{
-    width: min(100%, 280px);
+    width: min(100%, 200px);
     padding: 0.65rem 0.5rem;
     font-size: 0.95rem;
     font-variant: small-caps;
