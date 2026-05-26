@@ -963,7 +963,7 @@ textarea{ min-height: 110px; resize: vertical; }
   border: none;
   position: left;
   margin: auto;
-  margin-top: 0.75rem;
+  margin-top: 0.20rem;
 }
 
 footer{
@@ -975,6 +975,7 @@ footer{
 
 .footer-text{ font-variant: small-caps; text-align: center; margin: 0.5rem; font-size: 0.65rem; font: weight 400px;}
 .footer-word{ font-variant: small-caps; }
+.footer-contact{ font-variant: small-caps; text-align: center; margin: 0.5rem; font-size: 0.65rem; font: weight 400px;}
 
 /* Responsive */
 @media (max-width: 980px){
