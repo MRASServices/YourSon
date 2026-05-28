@@ -2935,11 +2935,11 @@ body.contact-page .con-bio-top h1{
     box-shadow: none;
     border-radius: 0;
     width: fit-content;
-    max-width: 50px;
+    max-width: 30px;
   }
 
   .menu-btn img{
-    width: 50px;
+    width: 30px;
     height: auto;
     display: block;
   }
