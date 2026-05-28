@@ -2539,7 +2539,7 @@ details.work-card:hover .work-overlay,
   .lead-about{
     font-size: 0.95rem;
     line-height: 1.65;
-    text-align: left;
+    text-align: justify;
     letter-spacing: 0.08ch;
     margin-top: 0;
   }
