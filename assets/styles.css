@@ -2958,4 +2958,8 @@ body.contact-page .con-bio-top h1{
   }
 
 }
+header{
+    border-bottom: 0.2px solid rgba(0,0,0,0.2);
+  }
+
 }
