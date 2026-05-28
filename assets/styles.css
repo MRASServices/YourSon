@@ -185,6 +185,7 @@ header{
   padding:.75rem 0 .75rem 1rem;
   border-bottom:1px solid rgba(0,0,0,1);
   text-decoration:none;
+  color: rgba(162, 52, 25, 1);
 }
 .mobile-submenu a:last-child{ border-bottom:0; }
 
