@@ -173,7 +173,7 @@ header{
   list-style:none;
   cursor:pointer;
   padding:.85rem 0;
-  border-bottom:1px solid rgba(0,0,0,1);
+  border-bottom:0.5px solid rgba(0,0,0,1);
   user-select:none;
 }
 .mobile-dropdown summary::-webkit-details-marker{ display:none; }
@@ -183,7 +183,7 @@ header{
 }
 .mobile-submenu a{
   padding:.75rem 0 .75rem 1rem;
-  border-bottom:1px solid rgba(0,0,0,1);
+  border-bottom:0.5px solid rgba(0,0,0,1);
   text-decoration:none;
   color: rgba(162, 52, 25, 1);
 }
