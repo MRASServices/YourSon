@@ -2340,10 +2340,9 @@ details.work-card:hover .work-overlay,
 
 .company-logo-strip{
   width: 100%;
-  margin: 3rem auto 0;
+  margin: 7rem auto 0;
   padding: 1.25rem 1rem;
   border-top: 1px solid rgba(0,0,0,1);
-  border-bottom: 1px solid rgba(0,0,0,1);
 }
 
 .company-logo-title{
@@ -2394,6 +2393,20 @@ details.work-card:hover .work-overlay,
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+/* BUSINESS SERVICES - LOGO STRIP / FOOTER SPACING FIX */
+
+.company-logo-strip{
+  margin: 3rem auto 0;
+}
+
+.ps-bio-box{
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.ps-two-col{
+  padding-bottom: 0;
+}
 
 
 /* ============================
