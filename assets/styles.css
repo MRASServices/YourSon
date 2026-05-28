@@ -193,7 +193,7 @@ header{
 .menu-btn{
   display:none;
   appearance:none;
-  border:1px solid var(--line);
+  border:0.5px solid var(--line);
   background: var(--card);
   padding:.45rem .7rem;
   border-radius:999px;
