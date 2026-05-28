@@ -2962,4 +2962,13 @@ header{
     border-bottom: 0.2px solid rgba(0,0,0,0.2);
   }
 
+.about-two-col{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
 }
