@@ -2335,6 +2335,68 @@ details.work-card:hover .work-overlay,
 }
 
 /* ============================
+   COMPANY LOGO STRIP
+   ============================ */
+
+.company-logo-strip{
+  width: 100%;
+  margin: 3rem auto 0;
+  padding: 1.25rem 1rem;
+  border-top: 1px solid rgba(0,0,0,1);
+  border-bottom: 1px solid rgba(0,0,0,1);
+}
+
+.company-logo-title{
+  margin: 0 auto 1.25rem;
+  text-align: center;
+  font-variant: small-caps;
+  letter-spacing: 0.18ch;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.company-logo-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.25rem, 4vw, 3rem);
+  flex-wrap: wrap;
+}
+
+.company-logo-row img{
+  max-width: 220px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 1;
+}
+
+.company-logo-row a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.company-logo-row a:hover img{
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.company-logo-row img{
+  max-width: 220px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+
+
+/* ============================
    MOBILE CLEANUP
    ============================ */
 
