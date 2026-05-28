@@ -2971,4 +2971,11 @@ header{
   margin-top: 2rem;
 }
 
+.center-text {
+  text-align: center;
+  margin-top:1.5rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
 }
