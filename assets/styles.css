@@ -366,7 +366,7 @@ h1{
 }
 
 .approach-title::after{
-  content: "â–¾";
+  content: "▾";
   color: rgba(162, 52, 25, 1);
   position: absolute;
   right: 50%;
@@ -1457,7 +1457,7 @@ details.ps-mini-box > summary::-webkit-details-marker{ display:none; }
 }
 
 .ps-mini-summary::after{
-  content: "â–¾";
+  content: "▾";
   color: rgba(162, 52, 25, 1);
   position: absolute;
   right: 50%;
@@ -2517,7 +2517,7 @@ details.work-card:hover .work-overlay,
   .about-bio-box{
     width: 92%;
     margin: 1rem auto;
-    padding: 1.25rem;
+    padding: 0.75rem;
   }
 
   .about-sep-line{
@@ -2962,6 +2962,13 @@ header{
     border-bottom: 0.2px solid rgba(0,0,0,0.2);
   }
 
-
+.about-two-col{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
 
 }
