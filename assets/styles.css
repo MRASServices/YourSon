@@ -2517,7 +2517,7 @@ details.work-card:hover .work-overlay,
   .about-bio-box{
     width: 92%;
     margin: 1rem auto;
-    padding: 0.75rem;
+    padding: 1.25rem;
   }
 
   .about-sep-line{
@@ -2623,7 +2623,7 @@ details.work-card:hover .work-overlay,
 
 body.about .about-bio-top h1,
 body.about .abt-h1{
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 body.about .about-sep-line{
