@@ -204,14 +204,14 @@ header{
 /* Mobile dropdown panel */
 .mobile-panel{
   display:none;
-  border-top:0.5px solid var(--line);
+  border-top:1px solid var(--line);
   padding:.75rem 0 1rem;
 }
 .mobile-panel a{
   display:block;
   text-decoration:none;
   padding:.85rem 0;
-  border-bottom:1px solid rgba(0,0,0,1);
+  border-bottom:0.5px solid rgba(0,0,0,1);
 }
 .mobile-panel a:last-child{ border-bottom:0; }
 header[data-open="true"] .mobile-panel{ display:block; }
