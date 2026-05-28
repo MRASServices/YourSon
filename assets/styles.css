@@ -2978,5 +2978,18 @@ header{
   font-weight: 500;
   font-size: 0.85rem;
 }
+@media (max-width: 760px){
 
+  .mobile-panel a,
+  .mobile-dropdown summary,
+  .mobile-submenu a{
+    text-align: center;
+  }
+
+  .mobile-submenu a{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
 }
