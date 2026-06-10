@@ -2412,7 +2412,137 @@ details.work-card:hover .work-overlay,
   padding-bottom: 0;
 }
 
+/* ============================
+   PRODUCT IMAGE GALLERY
+   ============================ */
 
+.product-gallery-trigger{
+  cursor: pointer;
+  padding: 0;
+}
+
+.product-gallery-trigger:hover img{
+  transform: scale(1.03);
+}
+
+.product-gallery-trigger img{
+  transition: transform 0.2s ease;
+}
+
+.product-gallery-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+}
+
+.product-gallery-modal.open{
+  display: block;
+}
+
+.product-gallery-backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+}
+
+.product-gallery-dialog{
+  position: relative;
+  width: min(900px, calc(100% - 2rem));
+  margin: 4rem auto;
+  background: rgba(255,249,231,1);
+  border: 1px solid rgba(0,0,0,1);
+  border-radius: 10px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.product-gallery-frame{
+  width: 100%;
+  height: min(70vh, 600px);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.product-gallery-frame img{
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-gallery-close{
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  border: 1px solid rgba(0,0,0,1);
+  background: rgba(255,249,231,1);
+  border-radius: 999px;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.product-gallery-nav{
+  border: 1px solid rgba(0,0,0,1);
+  background: rgba(162, 52, 25, 1);
+  color: #000;
+  border-radius: 999px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.product-gallery-caption{
+  grid-column: 1 / -1;
+  text-align: center;
+  font-variant: small-caps;
+  letter-spacing: 0.12ch;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px){
+
+  .product-gallery-dialog{
+    width: calc(100% - 1rem);
+    margin: 1rem auto;
+    grid-template-columns: 1fr;
+  }
+
+  .product-gallery-frame{
+    height: 60vh;
+  }
+
+  .product-gallery-nav{
+    width: 100%;
+    border-radius: 999px;
+  }
+
+  .product-gallery-nav.prev{
+    order: 2;
+  }
+
+  .product-gallery-frame{
+    order: 1;
+  }
+
+  .product-gallery-nav.next{
+    order: 3;
+  }
+
+  .product-gallery-caption{
+    order: 4;
+  }
+}
 /* ============================
    MOBILE CLEANUP
    ============================ */

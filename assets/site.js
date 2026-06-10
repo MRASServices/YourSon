@@ -2,11 +2,13 @@
    - Mobile menu toggle
    - Simple cart (localStorage) with count in header
    - Cart drawer rendering on all pages
+   - Product image gallery
 */
 
 const STORE_KEY = "demo_cart_v1";
 
-// Products (now includes dropdown info)
+// Products now include a gallery array.
+// Add more image paths inside each product's gallery array when you have more images.
 const PRODUCTS = [
   {
     id: "p1",
@@ -14,6 +16,9 @@ const PRODUCTS = [
     price: 0.00,
     note: "To keep your melon warm on Canada's coldest days - and buddy, does it ever get cold.",
     image: "assets/images/coming_soon.png",
+    gallery: [
+      "assets/images/coming_soon.png"
+    ],
     specs: ["One size fits most", "Shaker Knit", "Embroidered Logo"],
     materials: ["100% Cotton"],
     origin: ["Brampton, Ontario, Canada"]
@@ -24,6 +29,9 @@ const PRODUCTS = [
     price: 0.00,
     note: "Sometimes it's sunny, sometimes it's windy, and most times, our hair is in absolute shambles; it's great for all three.",
     image: "assets/images/coming_soon.png",
+    gallery: [
+      "assets/images/coming_soon.png"
+    ],
     specs: ["One size fits most", "Embroidered Logo"],
     materials: ["Cotton twill"],
     origin: ["Fenelon Falls, Ontario, Canada"]
@@ -34,6 +42,9 @@ const PRODUCTS = [
     price: 0.00,
     note: "Pants. We need them durable, comfortable, and not to look like something Armstrong wore when they filmed the landing in '69.  ",
     image: "assets/images/coming_soon.png",
+    gallery: [
+      "assets/images/coming_soon.png"
+    ],
     specs: ["Relaxed fit", "Reinforced seams"],
     materials: ["Workwear blend"],
     origin: ["Barrie, Ontario, Canada"]
@@ -44,8 +55,11 @@ const PRODUCTS = [
     price: 0.00,
     note: "Ever dreamed of finally owning a true part of Canadian history? Sorry, pal - this isn't that; keep looking.",
     image: "assets/images/coming_soon.png",
+    gallery: [
+      "assets/images/coming_soon.png"
+    ],
     specs: ["Natural reclaimed shape", "Hand-finished", "Width: 1.5″ or less", "Length: approx. 35″"],
-    materials: ["Reclaimed oak"], 
+    materials: ["Reclaimed oak"],
     origin: ["Salaberry-de-Valleyfield, Quebec, Canada"]
   },
   {
@@ -54,44 +68,57 @@ const PRODUCTS = [
     price: 0.00,
     note: "It really shouldn't take the Orange Man to remind us Canadians just how proud we are. Yet, here we are - again.",
     image: "assets/images/coming_soon.png",
+    gallery: [
+      "assets/images/coming_soon.png"
+    ],
     specs: ["Iron-on or sew-on"],
     materials: ["Woven patch, Embroidered"],
     origin: ["Newmarket, Ontario, Canada"]
   },
-   {
+  {
     id: "p6",
-    name: "bibliophile cutting board (set)",
+    name: "bibliophile cutting board (3)",
     price: 0.00,
     note: "From bedtime stories to dinnertime recipes, we love our books. Now, introducing books you can cut on - wow!",
     image: "assets/images/coming_soon.png",
+    gallery: [
+      "assets/images/coming_soon.png"
+    ],
     specs: ["Individual (in): 12l * 10w * 1th", "Set (in): 12l * 10w * 3th"],
-    materials: ["Red Oak","Maple","Red Grandis"],
+    materials: ["Red Oak", "Maple", "Red Grandis"],
     origin: ["Oshawa, Ontario, Canada"]
   },
-   {
+  {
     id: "p7",
-    name: "bibliophile cutting board (single)",
+    name: "bibliophile cutting board (1)",
     price: 0.00,
-    note: "No one likes the professor that forces you to buy multiple books he wrote. So instead of three, here's one. Suck it, Prof. Hull. ",
+    note: " One instead of three. Because no one likes that professor that forces you to buy multiple books he wrote - what a hotdog!",
     image: "assets/images/coming_soon.png",
+    gallery: [
+      "assets/images/coming_soon.png"
+    ],
     specs: ["Measurement (in): 12l * 10w * 1th"],
-    materials: ["Red Oak","Maple","Red Grandis"],
+    materials: ["Red Oak", "Maple", "Red Grandis"],
     origin: ["Oshawa, Ontario, Canada"]
   },
-   {
+  {
     id: "p8",
     name: "life can be a real birch",
     price: 0.00,
-    note: "There's something poetic about birch bark, framed within the scorched remains of it's fellow tree. Anyone know a therapist?",
+    note: "Birch bark framed within the scorched remains of it's fellow tree. How beautiful! Now, where is that therapist's number...",
     image: "assets/images/coming_soon.png",
+    gallery: [
+      "assets/images/coming_soon.png"
+    ],
     specs: ["Measurement (in): 11.75l x 9.75w"],
-    materials: ["Birch","Pine","Polyurethane"],
+    materials: ["Birch", "Pine", "Polyurethane"],
     origin: ["Whitchurch-Stouffville, Ontario, Canada"]
-      },
-
+  }
 ];
 
-function money(n){ return `$${n.toFixed(2)}`; }
+function money(n){
+  return `$${n.toFixed(2)}`;
+}
 
 function getCart(){
   try{
@@ -103,6 +130,7 @@ function getCart(){
     return [];
   }
 }
+
 function setCart(items){
   localStorage.setItem(STORE_KEY, JSON.stringify(items));
   updateCartBadges();
@@ -119,11 +147,13 @@ function updateCartBadges(){
   });
 }
 
-function addToCart(productId, qty=1){
+function addToCart(productId, qty = 1){
   const cart = getCart();
   const found = cart.find(x => x.id === productId);
+
   if(found) found.qty += qty;
   else cart.push({ id: productId, qty });
+
   setCart(cart);
 }
 
@@ -136,6 +166,7 @@ function changeQty(productId, delta){
   const cart = getCart();
   const it = cart.find(x => x.id === productId);
   if(!it) return;
+
   it.qty = Math.max(1, (it.qty || 1) + delta);
   setCart(cart);
 }
@@ -143,10 +174,12 @@ function changeQty(productId, delta){
 function cartTotal(){
   const cart = getCart();
   let total = 0;
+
   for(const it of cart){
     const p = PRODUCTS.find(x => x.id === it.id);
     if(p) total += p.price * (it.qty || 0);
   }
+
   return total;
 }
 
@@ -158,6 +191,7 @@ function ensureCartDrawer(){
   overlay.className = "cart-overlay";
   overlay.id = "cartOverlay";
   overlay.dataset.open = "false";
+
   overlay.innerHTML = `
     <aside class="cart" role="dialog" aria-modal="true" aria-label="Cart drawer">
       <div class="cart-header">
@@ -177,19 +211,23 @@ function ensureCartDrawer(){
       </div>
     </aside>
   `;
+
   document.body.appendChild(overlay);
 
   overlay.addEventListener("click", (e) => {
     if(e.target === overlay) setCartOpen(false);
   });
+
   overlay.querySelector("#cartCloseBtn").addEventListener("click", () => setCartOpen(false));
 
   overlay.querySelector("#checkoutBtn").addEventListener("click", () => {
     const count = cartCount();
+
     if(count === 0){
       alert("Your cart is empty.");
       return;
     }
+
     alert("Demo checkout. Replace this with your real checkout flow.");
   });
 }
@@ -197,12 +235,14 @@ function ensureCartDrawer(){
 function setCartOpen(open){
   const overlay = document.getElementById("cartOverlay");
   if(!overlay) return;
+
   overlay.dataset.open = open ? "true" : "false";
   if(open) renderCartDrawer();
 }
 
 function renderCartDrawer(){
   ensureCartDrawer();
+
   const cart = getCart();
   const itemsEl = document.getElementById("cartItems");
   const totalEl = document.getElementById("cartTotal");
@@ -210,7 +250,12 @@ function renderCartDrawer(){
   itemsEl.innerHTML = "";
 
   if(cart.length === 0){
-    itemsEl.innerHTML = `<div class="cart-item"><div class="name">Cart is empty</div><div class="sub">Add something from the Shop page.</div></div>`;
+    itemsEl.innerHTML = `
+      <div class="cart-item">
+        <div class="name">Cart is empty</div>
+        <div class="sub">Add something from the Shop page.</div>
+      </div>
+    `;
   }else{
     for(const it of cart){
       const p = PRODUCTS.find(x => x.id === it.id);
@@ -218,6 +263,7 @@ function renderCartDrawer(){
 
       const row = document.createElement("div");
       row.className = "cart-item";
+
       row.innerHTML = `
         <div class="top">
           <div>
@@ -226,11 +272,13 @@ function renderCartDrawer(){
           </div>
           <button class="icon-btn" type="button" data-remove="${p.id}" aria-label="Remove ${p.name}">Remove</button>
         </div>
+
         <div class="actions">
           <button class="btn ghost" type="button" data-qty="${p.id}" data-delta="-1">−</button>
           <button class="btn ghost" type="button" data-qty="${p.id}" data-delta="1">+</button>
         </div>
       `;
+
       itemsEl.appendChild(row);
     }
 
@@ -240,10 +288,12 @@ function renderCartDrawer(){
         renderCartDrawer();
       });
     });
+
     itemsEl.querySelectorAll("[data-qty]").forEach(btn => {
       btn.addEventListener("click", () => {
         const id = btn.getAttribute("data-qty");
         const delta = Number(btn.getAttribute("data-delta") || "0");
+
         changeQty(id, delta);
         renderCartDrawer();
       });
@@ -259,6 +309,7 @@ function initMobileMenu(){
   const header = document.getElementById("siteHeader");
   const btn = document.getElementById("menuBtn");
   const panel = document.getElementById("mobilePanel");
+
   if(!header || !btn || !panel) return;
 
   function setOpen(open){
@@ -280,23 +331,25 @@ function initMobileMenu(){
 /* Helpers for dropdown lists */
 function renderList(items){
   if(!items || !items.length) return `<p class="prod-dd-empty">Details coming soon.</p>`;
+
   return `<ul class="prod-dd-list">${items.map(x => `<li>${x}</li>`).join("")}</ul>`;
 }
 
-/* Shop renderer (only runs if the container exists) */
+/* Shop renderer */
 function renderShop(){
   const grid = document.getElementById("shopGrid");
   if(!grid) return;
 
   grid.innerHTML = "";
+
   for(const p of PRODUCTS){
     const card = document.createElement("article");
     card.className = "product";
 
     card.innerHTML = `
-      <div class="thumb">
+      <button class="thumb product-gallery-trigger" type="button" data-gallery="${p.id}" aria-label="View more images of ${p.name}">
         <img src="${p.image}" alt="${p.name}">
-      </div>
+      </button>
 
       <div class="prod-main">
         <h3>${p.name}</h3>
@@ -339,15 +392,145 @@ function renderShop(){
   grid.querySelectorAll("[data-add]").forEach(btn => {
     btn.addEventListener("click", () => {
       addToCart(btn.getAttribute("data-add"), 1);
+
       btn.textContent = "Added ✓";
-      setTimeout(() => (btn.textContent = "click to own"), 800);
+
+      setTimeout(() => {
+        btn.textContent = "click to own";
+      }, 800);
     });
+  });
+}
+
+/* Product image gallery */
+function ensureProductGalleryModal(){
+  if(document.getElementById("productGalleryModal")) return;
+
+  const modal = document.createElement("div");
+  modal.className = "product-gallery-modal";
+  modal.id = "productGalleryModal";
+  modal.setAttribute("aria-hidden", "true");
+
+  modal.innerHTML = `
+    <div class="product-gallery-backdrop" data-product-gallery-close="true"></div>
+
+    <div class="product-gallery-dialog" role="dialog" aria-modal="true" aria-label="Product image gallery">
+      <button class="product-gallery-close" type="button" data-product-gallery-close="true" aria-label="Close gallery">×</button>
+
+      <button class="product-gallery-nav prev" type="button" aria-label="Previous image">‹</button>
+
+      <div class="product-gallery-frame">
+        <img id="productGalleryImg" src="" alt="">
+      </div>
+
+      <button class="product-gallery-nav next" type="button" aria-label="Next image">›</button>
+
+      <div class="product-gallery-caption" id="productGalleryCaption"></div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+}
+
+let currentProductGallery = [];
+let currentProductGalleryIndex = 0;
+let currentProductGalleryName = "";
+
+function openProductGallery(productId){
+  ensureProductGalleryModal();
+
+  const product = PRODUCTS.find(p => p.id === productId);
+  if(!product) return;
+
+  currentProductGallery = product.gallery && product.gallery.length ? product.gallery : [product.image];
+  currentProductGalleryIndex = 0;
+  currentProductGalleryName = product.name;
+
+  const modal = document.getElementById("productGalleryModal");
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+
+  document.body.style.overflow = "hidden";
+
+  renderProductGalleryImage();
+}
+
+function closeProductGallery(){
+  const modal = document.getElementById("productGalleryModal");
+  if(!modal) return;
+
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+
+  document.body.style.overflow = "";
+}
+
+function renderProductGalleryImage(){
+  const img = document.getElementById("productGalleryImg");
+  const caption = document.getElementById("productGalleryCaption");
+
+  if(!img || !caption || !currentProductGallery.length) return;
+
+  img.src = currentProductGallery[currentProductGalleryIndex];
+  img.alt = `${currentProductGalleryName} image ${currentProductGalleryIndex + 1}`;
+  caption.textContent = `${currentProductGalleryName} — ${currentProductGalleryIndex + 1} / ${currentProductGallery.length}`;
+}
+
+function nextProductGalleryImage(){
+  if(!currentProductGallery.length) return;
+
+  currentProductGalleryIndex = (currentProductGalleryIndex + 1) % currentProductGallery.length;
+  renderProductGalleryImage();
+}
+
+function prevProductGalleryImage(){
+  if(!currentProductGallery.length) return;
+
+  currentProductGalleryIndex = (currentProductGalleryIndex - 1 + currentProductGallery.length) % currentProductGallery.length;
+  renderProductGalleryImage();
+}
+
+function initProductGallery(){
+  ensureProductGalleryModal();
+
+  document.addEventListener("click", (e) => {
+    const trigger = e.target.closest("[data-gallery]");
+
+    if(trigger){
+      openProductGallery(trigger.getAttribute("data-gallery"));
+      return;
+    }
+
+    if(e.target.matches("[data-product-gallery-close='true']")){
+      closeProductGallery();
+      return;
+    }
+
+    if(e.target.closest(".product-gallery-nav.next")){
+      nextProductGalleryImage();
+      return;
+    }
+
+    if(e.target.closest(".product-gallery-nav.prev")){
+      prevProductGalleryImage();
+      return;
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    const modal = document.getElementById("productGalleryModal");
+    if(!modal || !modal.classList.contains("open")) return;
+
+    if(e.key === "Escape") closeProductGallery();
+    if(e.key === "ArrowRight") nextProductGalleryImage();
+    if(e.key === "ArrowLeft") prevProductGalleryImage();
   });
 }
 
 /* Cart links in header */
 function initCartLinks(){
   ensureCartDrawer();
+
   document.querySelectorAll("[data-open-cart]").forEach(a => {
     a.addEventListener("click", (e) => {
       e.preventDefault();
@@ -368,33 +551,44 @@ window.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initCartLinks();
   renderShop();
+  initProductGallery();
   updateCartBadges();
   setYear();
   initPersonalServices();
 });
 
-/* ===== PERSONAL SERVICES SEARCH (your existing version kept) ===== */
+/* ===== PERSONAL SERVICES SEARCH ===== */
 function initPersonalServices(){
   const searchInput = document.getElementById("serviceSearch");
   const clearBtn = document.getElementById("clearSearch");
   const statusEl = document.getElementById("searchStatus");
   const boxes = Array.from(document.querySelectorAll("details.ps-mini-box"));
+
   if(!searchInput || !clearBtn || boxes.length === 0) return;
 
-  function normalize(s){ return (s || "").toLowerCase(); }
-  function setStatus(msg){ if(statusEl) statusEl.textContent = msg; }
+  function normalize(s){
+    return (s || "").toLowerCase();
+  }
+
+  function setStatus(msg){
+    if(statusEl) statusEl.textContent = msg;
+  }
 
   function escapeRegex(str){
     return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
+
   function highlightHtml(html, query){
     if(!query) return html;
+
     const re = new RegExp(escapeRegex(query), "gi");
+
     return html.replace(re, (m) => `<span class="ps-hit">${m}</span>`);
   }
 
   boxes.forEach(d => {
     const panel = d.querySelector(".ps-mini-panel");
+
     if(panel && !panel.dataset.origHtml){
       panel.dataset.origHtml = panel.innerHTML;
     }
@@ -408,6 +602,7 @@ function initPersonalServices(){
       d.classList.remove("match");
 
       const panel = d.querySelector(".ps-mini-panel");
+
       if(panel && panel.dataset.origHtml){
         panel.innerHTML = panel.dataset.origHtml;
       }
@@ -437,13 +632,14 @@ function initPersonalServices(){
     });
 
     if(!q) setStatus("");
-    else setStatus(`${matches} section${matches===1?"":"s"} matched`);
+    else setStatus(`${matches} section${matches === 1 ? "" : "s"} matched`);
   }
 
   searchInput.addEventListener("input", applyFilter);
 
   clearBtn.addEventListener("click", () => {
     searchInput.value = "";
+
     boxes.forEach(d => {
       d.style.display = "";
       d.classList.remove("match");
@@ -452,11 +648,11 @@ function initPersonalServices(){
       const panel = d.querySelector(".ps-mini-panel");
       if(panel && panel.dataset.origHtml) panel.innerHTML = panel.dataset.origHtml;
     });
+
     setStatus("");
     searchInput.focus();
   });
 
-  // Modals (unchanged)
   const callModal = document.getElementById("callModal");
   const writeModal = document.getElementById("writeModal");
   const openCall = document.getElementById("openCall");
@@ -466,22 +662,33 @@ function initPersonalServices(){
 
   function openModal(m){
     if(!m) return;
+
     m.classList.add("open");
     m.setAttribute("aria-hidden", "false");
   }
+
   function closeModal(m){
     if(!m) return;
+
     m.classList.remove("open");
     m.setAttribute("aria-hidden", "true");
+
     if(textFormWrap) textFormWrap.classList.remove("open");
   }
 
-  openCall && openCall.addEventListener("click", () => openModal(callModal));
-  openWrite && openWrite.addEventListener("click", () => openModal(writeModal));
+  if(openCall){
+    openCall.addEventListener("click", () => openModal(callModal));
+  }
+
+  if(openWrite){
+    openWrite.addEventListener("click", () => openModal(writeModal));
+  }
 
   document.addEventListener("click", (e) => {
     const t = e.target;
+
     if(!(t instanceof Element)) return;
+
     if(t.matches("[data-ps-close='true']")){
       if(callModal && callModal.classList.contains("open")) closeModal(callModal);
       if(writeModal && writeModal.classList.contains("open")) closeModal(writeModal);
@@ -490,19 +697,22 @@ function initPersonalServices(){
 
   document.addEventListener("keydown", (e) => {
     if(e.key !== "Escape") return;
+
     if(callModal && callModal.classList.contains("open")) closeModal(callModal);
     if(writeModal && writeModal.classList.contains("open")) closeModal(writeModal);
   });
 
-  openTextForm && openTextForm.addEventListener("click", () => {
-    if(!textFormWrap) return;
-    textFormWrap.classList.toggle("open");
-  });
+  if(openTextForm){
+    openTextForm.addEventListener("click", () => {
+      if(!textFormWrap) return;
+      textFormWrap.classList.toggle("open");
+    });
+  }
 
   applyFilter();
 }
 
-/* ===== GALLERY MODAL (unchanged) ===== */
+/* ===== GALLERY MODAL ===== */
 (() => {
   const modal = document.getElementById("workGallery");
   if(!modal) return;
@@ -520,66 +730,86 @@ function initPersonalServices(){
 
   function renderDots(){
     dotsEl.innerHTML = "";
+
     images.forEach((_, i) => {
       const b = document.createElement("button");
+
       b.type = "button";
       b.className = "gallery-dot" + (i === index ? " is-active" : "");
-      b.setAttribute("aria-label", `Go to photo ${i+1}`);
-      b.addEventListener("click", () => { index = i; render(); });
+      b.setAttribute("aria-label", `Go to photo ${i + 1}`);
+
+      b.addEventListener("click", () => {
+        index = i;
+        render();
+      });
+
       dotsEl.appendChild(b);
     });
   }
 
   function render(){
-    if (!images.length) return;
+    if(!images.length) return;
+
     imgEl.src = images[index];
-    imgEl.alt = `${titleEl.textContent} photo ${index+1} of ${images.length}`;
+    imgEl.alt = `${titleEl.textContent} photo ${index + 1} of ${images.length}`;
+
     renderDots();
   }
 
-  function openGallery({title, sub, imgs}){
+  function openGallery({ title, sub, imgs }){
     images = imgs;
     index = 0;
+
     titleEl.textContent = title || "Project";
     subEl.textContent = sub || `${images.length} photos`;
+
     lastFocus = document.activeElement;
 
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
+
     document.body.style.overflow = "hidden";
 
     render();
 
     const closeBtn = modal.querySelector("[data-close]");
-    closeBtn && closeBtn.focus();
+    if(closeBtn) closeBtn.focus();
   }
 
   function closeGallery(){
     modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
+
     document.body.style.overflow = "";
-    if (lastFocus) lastFocus.focus();
+
+    if(lastFocus) lastFocus.focus();
   }
 
   function next(){
-    if (!images.length) return;
+    if(!images.length) return;
+
     index = (index + 1) % images.length;
     render();
   }
 
   function prev(){
-    if (!images.length) return;
+    if(!images.length) return;
+
     index = (index - 1 + images.length) % images.length;
     render();
   }
 
   document.addEventListener("click", (e) => {
     const btn = e.target.closest(".js-open-gallery");
-    if (!btn) return;
+    if(!btn) return;
 
     let imgs = [];
-    try { imgs = JSON.parse(btn.dataset.images || "[]"); } catch {}
-    if (!imgs.length) return;
+
+    try{
+      imgs = JSON.parse(btn.dataset.images || "[]");
+    }catch{}
+
+    if(!imgs.length) return;
 
     openGallery({
       title: btn.dataset.title,
@@ -589,30 +819,40 @@ function initPersonalServices(){
   });
 
   modal.addEventListener("click", (e) => {
-    if (e.target.matches("[data-close]")) closeGallery();
+    if(e.target.matches("[data-close]")) closeGallery();
   });
 
-  nextBtn && nextBtn.addEventListener("click", next);
-  prevBtn && prevBtn.addEventListener("click", prev);
+  if(nextBtn) nextBtn.addEventListener("click", next);
+  if(prevBtn) prevBtn.addEventListener("click", prev);
 
   document.addEventListener("keydown", (e) => {
-    if (!modal.classList.contains("is-open")) return;
+    if(!modal.classList.contains("is-open")) return;
 
-    if (e.key === "Escape") closeGallery();
-    if (e.key === "ArrowRight") next();
-    if (e.key === "ArrowLeft") prev();
+    if(e.key === "Escape") closeGallery();
+    if(e.key === "ArrowRight") next();
+    if(e.key === "ArrowLeft") prev();
   });
 
   let startX = null;
   const frame = modal.querySelector(".gallery-frame");
-  frame && frame.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, {passive:true});
-  frame && frame.addEventListener("touchend", (e) => {
-    if (startX === null) return;
-    const endX = e.changedTouches[0].clientX;
-    const dx = endX - startX;
-    startX = null;
 
-    if (Math.abs(dx) < 40) return;
-    if (dx < 0) next(); else prev();
-  }, {passive:true});
+  if(frame){
+    frame.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    frame.addEventListener("touchend", (e) => {
+      if(startX === null) return;
+
+      const endX = e.changedTouches[0].clientX;
+      const dx = endX - startX;
+
+      startX = null;
+
+      if(Math.abs(dx) < 40) return;
+
+      if(dx < 0) next();
+      else prev();
+    }, { passive: true });
+  }
 })();
